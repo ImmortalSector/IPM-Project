@@ -1,8 +1,9 @@
 <template>
   
-  <Navbar>
+  <Navbar class="pm-5">
 
   </Navbar>
+
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
@@ -39,6 +40,6 @@ export default {
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #5F0B19;
 }
 </style>

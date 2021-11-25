@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark  sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img alt="We Fit" src="../assets/logo.png" width="90" height="90">
@@ -10,21 +10,21 @@
       <div class="collapse navbar-collapse pt-lg-5 pt-md-3 pt-1" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" id="navbar_feed">Feed</a>
+            <a class="nav-link active" aria-current="page" id="navbar_feed"><router-link class="rl" to="/" >Feed</router-link></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" id="navbar_events">Events</a>
+            <a class="nav-link active" id="navbar_events"><router-link class="rl" to="/events" >Events</router-link></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" id="navbar_forum">Forum</a>
+            <a class="nav-link active" id="navbar_forum"><router-link class="rl" to="/forum" >Forum</router-link></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" id="navbar_profile">Profile</a>
+            <a class="nav-link active" id="navbar_profile"><router-link class="rl" to="/profile">Profile</router-link></a>
           </li>
         </ul>
         <form class="d-flex grid" style="height: 25px; font-size: 10px;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn"  type="submit" style="height: 25px; font-size: 15px;"> <font-awesome-icon class="float-up" icon="search" style="margin-bottom: 2"/> </button>
+          <button class="btn"  type="submit" style="height: 25px; font-size: 15px;"> <font-awesome-icon class="float-up rl" icon="search" style="margin-bottom: 2"/> </button>
         </form>
       </div>
     </div>
@@ -45,4 +45,12 @@ export default {
 .btn{
   background: slategrey;
 }
+
+.rl{
+  text-decoration: none; color: inherit;
+}
+.rl:hover{
+  color: #5F0B19 ;
+}
+
 </style>
