@@ -1,13 +1,6 @@
 <template>
-  
-  <Navbar class="pm-5">
-
+  <Navbar class="mb-5">
   </Navbar>
-
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
   <router-view/>
 </template>
 
@@ -17,7 +10,12 @@ export default {
   name: 'App',
   components: {
     Navbar,
-  }
+  },
+  data(){
+    return {
+      post_cards: []
+    }
+  },
 }
 </script>
 
@@ -41,5 +39,12 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #5F0B19;
+}
+
+.dbg-red{
+  background: red;
+}
+.dbg-green{
+  background: green;
 }
 </style>

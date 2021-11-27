@@ -1,0 +1,31 @@
+{
+  "post_cards_list": [
+    {
+      "id": 0,
+      "title": "testing0",
+      "votes": -2,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": -1,
+      "comments": []
+    },
+    {
+      "id": 1,
+      "title": "testing1",
+      "votes": 7,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": 0,
+      "comments": []
+    },
+    {
+      "id": 2,
+      "title": "testing2",
+      "votes": 3,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": 0,
+      "comments": []
+    }
+  ]
+}

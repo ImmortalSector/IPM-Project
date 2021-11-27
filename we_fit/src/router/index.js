@@ -30,6 +30,17 @@ const routes = [
     name: 'Events',
     component: () => import(/* webpackChunkName: "about" */ '../views/Events_Feed.vue')
   },
+  {
+    path: '/addPost',
+    name: 'AddPostForum',
+    component: () => import('../views/AddPostForum.vue')
+  },
+  {
+    path: '/forumpost/:id',
+    name: 'ForumPost',
+    component: () => import('../views/ForumPostDetail.vue'),
+    props: true
+  },
 ]
 
 const router = createRouter({
