@@ -2,8 +2,7 @@
   <div class="py-5">
   </div>
   <div class="container">
-    <div class="row pb-2" :key = "post_card.id" v-for="post_card in post_cards_list">
-        test
+    <div class="row pb-2" :key = "post_card.id" v-for="post_card in feed_post_cards_list">
         <!-- <FeedPostCard @like="$emit('like', post_card.id)" class="FPC" :post_card = "post_card"/> -->
         <FeedPostCard class="FPC" :post_card = "post_card"/>
     </div>
@@ -18,7 +17,7 @@ export default {
     FeedPostCard
   },
   props: {
-    post_cards_list: Array
+    feed_post_cards_list: Array
   }
 }
 </script>

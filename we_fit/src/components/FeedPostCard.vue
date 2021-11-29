@@ -29,11 +29,11 @@
 <script>
 export default {
   name: 'FeedPostCard',
-  data () {
-    return {
-      imgPath: "../assets/"
-    }
-  },
+  // data () {
+  //   return {
+  //     imgPath: "../assets/"
+  //   }
+  // },
   props: {
     post_card: Object,
   },
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style>
-.image_thumbnail {
+/* .image_thumbnail {
   max-width: 100%;
   max-height: 100%;
   border: 3px solid #333333;
@@ -79,6 +79,6 @@ export default {
 .rl:hover{
   text-decoration: none;
   color: #5F0B19 ;
-}
+} */
 
 </style>

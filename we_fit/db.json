@@ -56,5 +56,34 @@
       "my_vote": 0,
       "comments": []
     }
+  ],
+  "event_cards_list": [
+    {
+      "id": 0,
+      "title": "testingEvent0",
+      "votes": -2,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": -1,
+      "comments": []
+    },
+    {
+      "id": 1,
+      "title": "testingEvent1",
+      "votes": 7,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": 0,
+      "comments": []
+    },
+    {
+      "id": 2,
+      "title": "testingEvent2",
+      "votes": 3,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": 0,
+      "comments": []
+    }
   ]
 }
