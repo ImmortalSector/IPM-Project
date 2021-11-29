@@ -3,19 +3,19 @@
     {
       "id": 0,
       "title": "testing0",
-      "votes": -2,
+      "votes": -1,
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
-      "my_vote": -1,
+      "my_vote": 0,
       "comments": []
     },
     {
       "id": 1,
       "title": "testing1",
-      "votes": 7,
+      "votes": 6,
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
-      "my_vote": 0,
+      "my_vote": -1,
       "comments": []
     },
     {

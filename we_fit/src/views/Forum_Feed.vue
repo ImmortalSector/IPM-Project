@@ -31,7 +31,6 @@ export default {
     },
 
     async upvote(id){
-      console.log("downvote connect");
       const taskToToggle = await this.fetchForumPostCard(id)
       const vote = (taskToToggle.my_vote > 0)? 0 : 1;
       const score_update = (taskToToggle.my_vote <= 0)? ((taskToToggle.my_vote === 0) ? 1 : 2) : -1;
@@ -52,7 +51,6 @@ export default {
     },
 
     async downvote(id){
-      console.log("downvote connect");
       const taskToToggle = await this.fetchForumPostCard(id)
       const vote = (taskToToggle.my_vote < 0)? 0 : -1;
       const score_update = (taskToToggle.my_vote >= 0)? ((taskToToggle.my_vote === 0) ? -1 : -2) : 1;
@@ -91,7 +89,7 @@ export default {
             post.description.includes(content) || post.title.includes(content)
         )
         this.lastSearch = content;
-    }
+      }
     },
 
   },

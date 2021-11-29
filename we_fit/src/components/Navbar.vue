@@ -22,9 +22,9 @@
             <a class="nav-link active" id="navbar_profile"><router-link class="rl" to="/profile">Profile</router-link></a>
           </li>
         </ul>
-        <form class="d-flex grid" style="height: 25px; font-size: 10px;">
+        <form @submit="alert_not_implementd" class="d-flex grid" style="height: 25px; font-size: 10px;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn"  type="submit" style="height: 25px; font-size: 15px;"> <font-awesome-icon class="float-up rl" icon="search" style="margin-bottom: 2"/> </button>
+          <button class="btn"  type="submit" style="height: 25px; font-size: 15px;"> <font-awesome-icon class="float-up rl" icon="search" /> </button>
         </form>
       </div>
     </div>
@@ -37,6 +37,11 @@
 export default {
   name: "Navbar",
   components: {
+  },
+  methods : {
+    alert_not_implementd (){
+      alert('The feature \'User searching\' is not yet implemented. But our team is working hard to bring it to you. Sorry for the inconveniences. =(')
+    }
   }
 }
 </script>

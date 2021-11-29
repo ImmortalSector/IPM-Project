@@ -6,13 +6,13 @@
         <form style="max-height: 100%; height:100%">
           <div class="row voting-element">
             <button @click="$emit('upvote', post_card.id)" :class="[post_card.my_vote === 1 ? 'vote-button-selected' : 'vote-button']">
-              <font-awesome-icon class="voting-element justify-content-center" icon="arrow-up" style="height: 40%; width: 90%"/>
+              <font-awesome-icon class="voting-element justify-content-center" icon="arrow-up" style="height: 2vh; width: 2vw"/>
             </button>
           </div>
           <div class="row voting-element justify-content-center vote-count"> {{ post_card.votes }} </div>
           <div class="row voting-element">
             <button @click="$emit('downvote', post_card.id)" :class="[post_card.my_vote === -1 ? 'vote-button-selected' : 'vote-button']">
-            <font-awesome-icon class="voting-element justify-content-center" icon="arrow-down" style="height: 40%; width: 90%"/>
+            <font-awesome-icon class="voting-element justify-content-center" icon="arrow-down" style="height: 2vh; width: 2vw"/>
             </button>
           </div>
         </form>
@@ -27,7 +27,7 @@
         <router-link class="rl" :to="{name: 'ForumPost', params: {id: post_card.id}}" >
         <div class="container">
           <div class="row align-items-start" style="font-size: xx-large">
-              {{ post_card.title }} {{post_card.my_vote}}
+              {{ post_card.title }}
           </div>
             <div class="row align-items-end">
             {{post_card.description}}
