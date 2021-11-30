@@ -20,7 +20,7 @@
 
 <script>
 import PostVoteBar from "../components/PostVoteBar";
-import CommentSection from "../components/CommentSection";
+import CommentSection from "../components/Forum_Components/CommentSection";
 export default{
   name: "ForumPostDetail",
   components: {

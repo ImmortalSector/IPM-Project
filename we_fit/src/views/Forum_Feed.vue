@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import ForumPostCardsList from "../components/ForumPostCardsList";
-import ForumSearchBar from "../components/ForumSearchBar";
-import AddPostPlusButton from "../components/AddPostPlusButton";
+import ForumPostCardsList from "../components/Forum_Components/ForumPostCardsList";
+import ForumSearchBar from "../components/Forum_Components/ForumSearchBar";
+import AddPostPlusButton from "../components/Forum_Components/AddPostPlusButton";
 export default {
   name: "Forum_Feed",
   components: {

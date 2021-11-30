@@ -16,7 +16,7 @@
   </div>
 </template>
 <script>
-import PostVoteBar from "./PostVoteBar";
+import PostVoteBar from "../PostVoteBar";
 export default {
   name: 'ForumCommentCard',
   components: {
