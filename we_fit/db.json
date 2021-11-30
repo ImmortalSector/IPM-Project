@@ -7,7 +7,22 @@
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
       "my_vote": 0,
-      "comments": []
+      "comments": [
+        {
+          "id" : 0,
+          "author": "jake",
+          "text" : "Lorem ipsum dolor sit ameth",
+          "my_vote": 0,
+          "votes": -1
+        },
+        {
+          "id" : 1,
+          "author": "Anna",
+          "text" : "Lorem ipsum dolor sit ameth",
+          "my_vote": 0,
+          "votes": -1
+        }
+      ]
     },
     {
       "id": 1,
@@ -16,7 +31,22 @@
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
       "my_vote": -1,
-      "comments": []
+      "comments": [
+        {
+          "id" : 0,
+          "author": "jake",
+          "text" : "Lorem ipsum dolor sit ameth",
+          "my_vote": 0,
+          "votes": -1
+        },
+        {
+          "id" : 1,
+          "author": "Anna",
+          "text" : "Lorem ipsum dolor sit ameth",
+          "my_vote": 0,
+          "votes": -1
+        }
+      ]
     },
     {
       "id": 2,
@@ -25,7 +55,22 @@
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
       "my_vote": 0,
-      "comments": []
+      "comments": [
+        {
+          "id" : 0,
+          "author": "jake",
+          "text" : "Lorem ipsum dolor sit ameth",
+          "my_vote": 0,
+          "votes": -1
+        },
+        {
+          "id" : 1,
+          "author": "Anna",
+          "text" : "Lorem ipsum dolor sit ameth",
+          "my_vote": 0,
+          "votes": -1
+        }
+      ]
     }
   ]
 }

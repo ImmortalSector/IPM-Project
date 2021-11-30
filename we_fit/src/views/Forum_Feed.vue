@@ -73,9 +73,7 @@ export default {
 
     async fetchForumPostCard(id) {
       const res = await fetch(`api/post_cards_list/${id}`)
-
       const data = await res.json()
-
       return data
     },
 

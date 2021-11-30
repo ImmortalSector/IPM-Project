@@ -13,7 +13,7 @@
       <PostVoteBar @downvote_post="downvote" @upvote_post="upvote" :post="post" style="max-height: 5vh"/>
     </div>
     <div class="row">
-      <comment-section :post="this.post"/>
+      <comment-section :id="this.post.id"/>
     </div>
   </div>
 </template>
@@ -61,9 +61,11 @@ export default{
 
   },
   async created() {
+    console.log("ForumPostDetails")
     const res = await fetch(`api/post_cards_list/${this.id}`)
     const data = await res.json()
     this.post = data
+    //console.log(this.post)
   },
 };
 

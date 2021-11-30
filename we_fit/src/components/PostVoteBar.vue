@@ -22,7 +22,7 @@ export default {
     }
   },
   props: {
-    post: Object,
+    post: {},
   },
 }
 </script>
