@@ -1,4 +1,33 @@
 {
+  "feed_post_cards_list": [
+    {
+      "id": 0,
+      "title": "testingA",
+      "user": "Oscar_69",
+      "likes": 2,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_like": 1
+    },
+    {
+      "id": 1,
+      "title": "testingB",
+      "user": "Oscar_68",
+      "likes": 7,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_like": 0
+    },
+    {
+      "id": 2,
+      "title": "testingC",
+      "user": "Oscar_67",
+      "likes": 3,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_like": 0
+    }
+  ],
   "post_cards_list": [
     {
       "id": 0,
@@ -71,6 +100,35 @@
           "votes": -1
         }
       ]
+    }
+  ],
+  "event_cards_list": [
+    {
+      "id": 0,
+      "title": "testingEvent0",
+      "votes": -2,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": -1,
+      "comments": []
+    },
+    {
+      "id": 1,
+      "title": "testingEvent1",
+      "votes": 7,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": 0,
+      "comments": []
+    },
+    {
+      "id": 2,
+      "title": "testingEvent2",
+      "votes": 3,
+      "description": "Lorem ipsum dolor sit ameth",
+      "img_path": "logo.png",
+      "my_vote": 0,
+      "comments": []
     }
   ]
 }
