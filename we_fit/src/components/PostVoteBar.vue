@@ -1,14 +1,19 @@
 <template>
   <form class="form-row form-inline">
+    <div class="voting-element ml-4">
+      <button v-if="this.add_comment" @click="$emit('new_comment_tab')" :class="[this.area_toggled === true ? 'vote-button-selected' : 'vote-button']">
+        <font-awesome-icon class="voting-element justify-content-center vote-arrow" icon="comment-alt"/>
+      </button>
+    </div>
     <div class=" voting-element">
       <button @click="$emit('upvote_post')" :class="[post.my_vote === 1 ? 'vote-button-selected' : 'vote-button']">
-        <font-awesome-icon class="voting-element justify-content-center" icon="arrow-up" style="height: 40%; width: 90%"/>
+        <font-awesome-icon class="voting-element justify-content-center vote-arrow" icon="arrow-up"/>
       </button>
     </div>
     <div class=" voting-element justify-content-center vote-count"> {{ post.votes }}</div>
     <div class=" voting-element">
       <button @click="$emit('downvote_post')" :class="[post.my_vote === -1 ? 'vote-button-selected' : 'vote-button']">
-        <font-awesome-icon class="voting-element justify-content-center" icon="arrow-down" style="height: 40%; width: 90%"/>
+        <font-awesome-icon class="voting-element justify-content-center vote-arrow" icon="arrow-down"/>
       </button>
     </div>
   </form>
@@ -19,9 +24,12 @@ export default {
   name: 'PostVoteBar',
   data () {
     return {
+
     }
   },
   props: {
+    add_comment: Boolean,
+    area_toggled: Boolean,
     post: {},
   },
 }
@@ -42,9 +50,14 @@ export default {
   align-content: center;
   text-align: center!important;
   align-items: center;
+  font-size: medium;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
+}
+.vote-arrow {
+  height: 3vh;
+  width: 3vw;
 }
 .vote-button{
   background: none;

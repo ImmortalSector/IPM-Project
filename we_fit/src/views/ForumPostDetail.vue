@@ -10,10 +10,18 @@
       <p class="post-description">
         {{ post.description }}
       </p>
-      <PostVoteBar @downvote_post="downvote" @upvote_post="upvote" :post="post" style="max-height: 5vh"/>
+      <PostVoteBar @downvote_post="downvote" @upvote_post="upvote" @new_comment_tab="toggleNewCommentArea" :post="post" :add_comment="true" :area_toggled="this.showAddComment" style="max-height: 5vh"/>
+      <form v-if="showAddComment" class="comment-text-input">
+        <div class="comment-text-input mt-3">
+          <textarea type="textarea" class="form-control comment-text-input" id="new_comment_text"  placeholder="Enter your comment"/>
+          <button class="btn btn-dark btn-lg my-2"  type="submit" style="height: 25px; font-size: 15px;">
+            submit
+          </button>
+        </div>
+      </form>
     </div>
     <div class="row">
-      <comment-section :id="this.post.id"/>
+      <comment-section :id="this.id"/>
     </div>
   </div>
 </template>
@@ -30,7 +38,8 @@ export default{
   props: ['id'],
   data() {
     return {
-      post: {}
+      post: {},
+      showAddComment: false
     };
   },
   methods : {
@@ -40,6 +49,9 @@ export default{
       const data = await res.json()
 
       return data
+    },
+    toggleNewCommentArea(){
+      this.showAddComment = ! this.showAddComment;
     },
     async upvote(){
       const postChange = this.post
@@ -117,5 +129,18 @@ export default{
   font-size: 1rem;
   font-weight: bold;
 }
+.comment-text-input{
+  overflow: auto;
+  min-height: 10vh;
+  height: 100%;
+  width: 100%;
+}
 
+.btn-lg{
+  padding: 0 0 0 0;
+  align-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 20vh;
+}
 </style>
