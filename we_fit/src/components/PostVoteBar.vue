@@ -55,9 +55,12 @@ export default {
   padding-right: 1.5rem;
 
 }
+
 .vote-arrow {
   height: 3vh;
   width: 3vw;
+  padding-top: 5px;
+  padding-bottom: 2px;
 }
 .vote-button{
   background: none;

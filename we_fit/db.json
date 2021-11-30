@@ -38,6 +38,34 @@
       "my_vote": 0,
       "comments": [
         {
+          "author": "me",
+          "id": 5,
+          "text": "aaaaaaaaaaaaaaas",
+          "my_vote": 1,
+          "votes": 1
+        },
+        {
+          "author": "me",
+          "id": 4,
+          "text": "asas",
+          "my_vote": 1,
+          "votes": 1
+        },
+        {
+          "author": "me",
+          "id": 3,
+          "text": "asad",
+          "my_vote": 1,
+          "votes": 1
+        },
+        {
+          "author": "me",
+          "id": 2,
+          "text": "aaaaaaa",
+          "my_vote": 1,
+          "votes": 1
+        },
+        {
           "id": 0,
           "author": "jake",
           "text": "Lorem ipsum dolor sit ameth",
