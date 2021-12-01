@@ -10,6 +10,18 @@ export default{
   components: {
 
   },
+  data(){
+    return {
+      type: {},
+      event_name: {},
+      make_public: {},
+      start_date: {},
+      end_date: {},
+      ruleset: {},
+      description: {},
+      invites: [],
+    }
+  },
 }
 </script>
 
