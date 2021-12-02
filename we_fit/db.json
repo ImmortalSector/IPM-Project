@@ -39,29 +39,8 @@
       "comments": [
         {
           "author": "me",
-          "id": 5,
-          "text": "aaaaaaaaaaaaaaas",
-          "my_vote": 1,
-          "votes": 1
-        },
-        {
-          "author": "me",
-          "id": 4,
-          "text": "asas",
-          "my_vote": 1,
-          "votes": 1
-        },
-        {
-          "author": "me",
-          "id": 3,
-          "text": "asad",
-          "my_vote": 1,
-          "votes": 1
-        },
-        {
-          "author": "me",
           "id": 2,
-          "text": "aaaaaaa",
+          "text": ".lhkhl.k",
           "my_vote": 1,
           "votes": 1
         },
@@ -128,6 +107,51 @@
           "votes": -1
         }
       ]
+    },
+    {
+      "id": 3,
+      "title": "dgf",
+      "votes": 1,
+      "description": "fds",
+      "img_path": "logo.png",
+      "my_vote": 1,
+      "comments": []
+    },
+    {
+      "id": 4,
+      "title": "sa",
+      "votes": 1,
+      "description": "sa",
+      "img_path": "logo.png",
+      "my_vote": 1,
+      "comments": []
+    },
+    {
+      "id": 5,
+      "title": "dsfdfs",
+      "votes": 1,
+      "description": "dfsfd",
+      "img_path": "logo.png",
+      "my_vote": 1,
+      "comments": []
+    },
+    {
+      "id": 6,
+      "title": "saddsa",
+      "votes": 1,
+      "description": "asdd",
+      "img_path": "logo.png",
+      "my_vote": 1,
+      "comments": []
+    },
+    {
+      "id": 7,
+      "title": "sadsad",
+      "votes": 1,
+      "description": "sadsd",
+      "img_path": "logo.png",
+      "my_vote": 1,
+      "comments": []
     }
   ],
   "event_cards_list": [
@@ -157,6 +181,87 @@
       "img_path": "logo.png",
       "my_vote": 0,
       "comments": []
+    }
+  ],
+  "training_plans": [
+    {
+      "name": "TP_0",
+      "type": "back",
+      "frequency": [1,0,1,0,1,0,0],
+      "period": 30,
+      "exercises": [
+          {
+          "id": 0,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },{
+          "id": 2,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        }
+      ]
+    },
+    {
+      "name": "TP_1",
+      "type": "core",
+      "frequency": [1,0,1,0,1,0,0],
+      "period": 30,
+      "exercises": [
+        {
+          "id": 0,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },{
+          "id": 2,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        }
+      ]
+    }
+  ],
+  "exercise_tags_list": [{"name": "back"}, {"name": "chest"}, {"name": "legs"}, {"name": "full body"}, {"name": "push"}, {"name": "pull"}, {"name": "core"}, {"name": "arms"}],
+  "exercise_list": [
+    {
+      "id": 0,
+      "name": "Kettle Bell Swings",
+      "tags": ["back", "legs"]
+    },
+    {
+      "id": 1,
+      "name": "Barbell Deadlift",
+      "tags": ["back", "legs"]
+    },{
+      "id": 2,
+      "name": "Pull Up",
+      "tags": ["back", "arms", "pull"]
+    },{
+      "id": 3,
+      "name": "Lat Pulldown",
+      "tags": ["arms", "back", "pull"]
+    },{
+      "id": 4,
+      "name": "Barbell Deadlift",
+      "tags": ["back", "legs"]
+    },{
+      "id": 4,
+      "name": "Leg Raises",
+      "tags": ["core"]
+    },{
+      "id": 5,
+      "name": "Dips",
+      "tags": ["arms","chest","core", "push"]
+    },{
+      "id": 6,
+      "name": "Push Ups",
+      "tags": ["arms","chest", "push"]
+    },{
+      "id": 7,
+      "name": "That one that no one likes",
+      "tags": ["legs"]
+    },{
+      "id": 8,
+      "name": "You're a wizard harry",
+      "tags": ["back", "chest", "legs", "full body", "push", "pull", "core", "arms"]
     }
   ]
 }

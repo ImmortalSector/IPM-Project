@@ -19,8 +19,12 @@
             <a class="nav-link active" id="navbar_forum"><router-link class="rl" to="/forum" >Forum</router-link></a>
           </li>
           <li class="nav-item">
+            <a class="nav-link active" id="navbar_tp"><router-link class="rl" to="/TP">Training Plans</router-link></a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" id="navbar_profile"><router-link class="rl" to="/profile">Profile</router-link></a>
           </li>
+
         </ul>
         <form @submit="alert_not_implementd" class="d-flex grid" style="height: 25px; font-size: 10px;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -29,7 +33,6 @@
       </div>
     </div>
   </nav>
-
 
 </template>
 

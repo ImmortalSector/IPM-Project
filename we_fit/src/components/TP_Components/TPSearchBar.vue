@@ -1,0 +1,36 @@
+<template>
+  <form @submit="$emit('ex_search_event', $event, search)">
+    <div class="form-row d-inline-flex">
+      <div class="form-control col d-inline-flex align-self-center">
+        <input type="text" v-model="search" name="search" placeholder="Search forum" style="border: 0px" />
+      </div>
+      <div class="div d-inline-flex ">
+        <button type="submit" value="" class="btn btn-block align-self-center" style="color: #FFFFFF; background-color: #5F0B19">
+          <font-awesome-icon icon="search"/>
+        </button>
+      </div>
+    </div>
+  </form>
+</template>
+
+<script>
+export default {
+  name: 'TPSearchBar',
+  data() {
+    return {
+      search: '',
+    }
+  },
+  components: {
+
+  },
+  props: {
+    lastSearch : String
+  }
+}
+</script>
+
+<style scoped>
+
+
+</style>
