@@ -79,7 +79,6 @@ export default {
 
     async filterList(e, content){
       e.preventDefault();
-      console.log("Got to filterList");
       if(content === ""){
         this.post_cards_list = await this.fetchForumPostCardsList()
       }else{

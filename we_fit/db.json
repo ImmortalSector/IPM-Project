@@ -228,7 +228,7 @@
     },
     {
       "id": 1,
-      "name": "Barbell Deadlift",
+      "name": "Barbell Deadlift ",
       "tags": ["back", "legs"]
     },{
       "id": 2,
@@ -240,10 +240,10 @@
       "tags": ["arms", "back", "pull"]
     },{
       "id": 4,
-      "name": "Barbell Deadlift",
+      "name": "Barbell Deadlift 2",
       "tags": ["back", "legs"]
     },{
-      "id": 4,
+      "id": 9,
       "name": "Leg Raises",
       "tags": ["core"]
     },{
@@ -261,7 +261,7 @@
     },{
       "id": 8,
       "name": "You're a wizard harry",
-      "tags": ["back", "chest", "legs", "full body", "push", "pull", "core", "arms"]
+      "tags": ["back", "chest", "full body", "push", "pull", "core"]
     }
   ]
 }

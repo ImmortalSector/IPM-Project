@@ -1,25 +1,22 @@
 <template>
-  <button @click="debug">debug ex sel</button>
-  <br>
-  <br>
-  <br>
-  <br>
   <div class="d-inline-flex align-content-end flex-row control-bar ">
-    <TPExerciseTags @ex_search_event="search_event_handler" class="ex-selector" />
-    <TPSearchBar @tp_tag_select_event="tag_event_handler" class="ex-search" />
+    <TPExerciseTags @tag="tagEventHandler" class="ex-selector" />
+    <TPSearchBar @search.prevent="searchEventHandler" class="ex-search" />
   </div>
-  <div class="row">
+  <div class="flex-row ex_cards_contianer">
     <ul>
-      <li class="col-xs-6" value="1" v-for="ex in current_exercises" :key="ex.id">
-        <ExerciseCard/>
+      <li class="card-list" value="1" v-for="ex in current_exercises" :key="ex.id">
+        <ExerciseCard :ex_card="ex" @exSelection="$emit('exSelection', ex.id)" />
       </li>
     </ul>
   </div>
+
 </template>
 <script>
 import TPSearchBar from "./TPSearchBar";
 import TPExerciseTags from "./TPExerciseTags";
 import ExerciseCard from "./ExerciseCard";
+
 export default {
   name: "ExerciseSelector",
   components: {
@@ -44,20 +41,42 @@ export default {
     },
     debug(e){
       e.preventDefault()
+      console.log(this.all_exercises);
+    },
 
-    },
-    search_event_handler(e, search){
+    async searchEventHandler(e, search){
       e.preventDefault();
-      alert(search); //TODO Debug mode
+      alert(search);
+      console.log('search hit');
+      this.currentSearch = search;
+      this.current_exercises = this.current_exercises((ex) => ex.name.includes(search));
     },
-    tag_event_handler(e, tag){
+    async tagEventHandler(e, tag){
       e.preventDefault();
-      alert(tag); //TODO Debug mode
+      alert(tag);
+      console.log('tag hit');
+      this.currentTag = tag;
+      if( tag === 'all'){
+        alert('We in: ' + tag)
+        this.current_exercises = this.all_exercises
+      }else{
+        this.current_exercises = this.all_exercises.filter((ex) => ex.tags.includes(tag))
+      }
+    },
+
+    // Fetchers:
+    async get_exercise_list(){
+      const res = await fetch(`api/exercise_list`)
+      return res.json();
+
     }
-  },
-  created() {
 
-  }
+  },
+  async created() {
+    this.all_exercises = await this.get_exercise_list();
+    this.current_exercises = this.all_exercises;
+    this.print('reloaded');
+  },
 }
 </script>
 <style scoped>
@@ -70,9 +89,26 @@ export default {
   width: 25vw;
 }
 .control-bar{
-  width: 100%;
+  margin: 0 0 0 0;
+  width: 100%!important;
   background-color: #333333;
   color: #FFFFFF;
   padding: 1vh 1vw 1vh 1vw;
+  border-radius: 10px 10px 0 0;
+}
+.ex_cards_contianer{
+  height: 40vh;
+  border: solid #333333;
+  overflow: auto;
+  border-radius: 0 0 10px 10px;
+}
+.card-list{
+  float: left;
+  display: inline-block;
+  margin: 0.5%;
+  min-height: 10vh;
+  min-width: 10vw;
+  width: 32%;
+
 }
 </style>

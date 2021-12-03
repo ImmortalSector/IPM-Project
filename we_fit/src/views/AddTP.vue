@@ -25,7 +25,7 @@
         <br>
         <br>
         <br>
-        <p class="d-inline-flex left-align-absolute flex-row mt-5 " >
+        <p class="d-inline-flex left-align-absolute flex-row mt-5" >
           How often (week):
         </p>
        </div>
@@ -42,20 +42,25 @@
     </div>
   </form>
   <button @click="debug">debug</button>
-  <div class="row mt-5">
+  <div class="flex-row mt-5 d-inline-flex">
     <div class="col-8">
-      <ExerciseSelector/>
+      <ExerciseSelector @exSelection="manageExerciseSelection"/>
+    </div>
+    <div class="col-8">
+      <TPSelectedExercises :key="this.selected_ex.length" :id_selected_exercises="this.selected_ex" style="height: 100%; border-radius: 1vw"/>
     </div>
   </div>
 
-
+  <br>
 </div>
 </template>
 <script>
 import ExerciseSelector from "../components/TP_Components/ExerciseSelector";
+import TPSelectedExercises from "../components/TP_Components/TPSelectedExercises";
 export default {
   name: "AddTP",
   components: {
+    TPSelectedExercises,
     ExerciseSelector
   },
   props : {
@@ -67,7 +72,7 @@ export default {
       type: '',
       mon: false, tue: false, wed: false,  thu: false, fri: false, sat: false, sun: false,
       period: 0,
-      exercises: [],
+      selected_ex: [],
       exercise_types: [{name: 'back'}, {name: 'chest'}, {name: 'legs'}, {name: 'full body'}, {name: 'push'}, {name: 'pull'}, {name: 'core'}, {name: 'arms'}],
     }
   },
@@ -83,7 +88,16 @@ export default {
     OnSubmit(){
 
     },
-    
+    manageExerciseSelection(ex_id){
+      if(!this.selected_ex.includes(ex_id)){
+        //if not in
+        this.selected_ex.push(ex_id);
+      }else{
+        //if already in
+        this.selected_ex = this.selected_ex.filter((ex) => ex !== ex_id );
+      }
+
+    },
   },
   created() {
 
