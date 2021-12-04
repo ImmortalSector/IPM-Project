@@ -1,8 +1,8 @@
 <template>
-  <div class="py-5">
+  <div class="py-3">
   </div>
   <div class="container">
-    <div class="row pb-2" :key = "post_card.id" v-for="post_card in feed_post_cards_list">
+    <div class="row pb-2" :key = "post_card.id" v-for="post_card in post_cards_list">
         <!-- <FeedPostCard @like="$emit('like', post_card.id)" class="FPC" :post_card = "post_card"/> -->
         <FeedPostCard class="FPC" :post_card = "post_card"/>
     </div>
@@ -17,7 +17,7 @@ export default {
     FeedPostCard
   },
   props: {
-    feed_post_cards_list: Array
+    post_cards_list: Array
   }
 }
 </script>
@@ -26,7 +26,10 @@ export default {
   background: #333333;
   color: #FFFF;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem ;
-  min-height: 8rem;
-  max-height: 8rem
+  /* min-height: 8rem;
+  max-height: 8rem */
+  width:500px;
+  height:400px;
+
 }
 </style>
