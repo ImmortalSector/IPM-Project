@@ -58,7 +58,7 @@ const routes = [
     component: () => import('../views/AddTP.vue')
   },
   {
-    path: '/TPDetail',
+    path: '/TP/:id',
     name: 'TPDetail',
     component: () => import('../views/TPDetail.vue'),
     props: true

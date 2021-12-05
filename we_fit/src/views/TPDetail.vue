@@ -1,5 +1,5 @@
 <template>
-a
+  {{ this.id }}
 </template>
 <script>
 export default {
@@ -7,7 +7,7 @@ export default {
   components: {
   },
   props : {
-
+    id: Number,
   },
   data(){
     return {
@@ -19,6 +19,9 @@ export default {
       console.log(msg)
     },
 
+  },
+  created() {
+    console.log(this.id);
   }
 }
 </script>

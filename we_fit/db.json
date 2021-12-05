@@ -295,6 +295,64 @@
           "no_series": 0
         }
       ]
+    },
+    {
+      "id": 4,
+      "name": "testing_add_with_ex",
+      "type": "chest",
+      "frequency": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "period": 12,
+      "exercises": [
+        {
+          "id": 0,
+          "no_reps_instr": "2",
+          "no_series": 2
+        },
+        {
+          "id": 1,
+          "no_reps_instr": "3",
+          "no_series": 23
+        },
+        {
+          "id": 2,
+          "no_reps_instr": "",
+          "no_series": 0
+        },
+        {
+          "id": 9,
+          "no_reps_instr": "",
+          "no_series": 0
+        },
+        {
+          "id": 7,
+          "no_reps_instr": "",
+          "no_series": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "all_empty",
+      "type": "back",
+      "frequency": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "period": 0,
+      "exercises": []
     }
   ],
   "exercise_tags_list": [

@@ -172,8 +172,7 @@ export default {
       const id = await this.calcIndex();
       const frequency = this.howOften();
       const exercises = this.ex_details;
-    alert(id);
-    this.print(id)
+      console.log(id)
       const new_plan = {
           id: id,
           name: this.name,
@@ -190,8 +189,12 @@ export default {
         },
         body: JSON.stringify(new_plan),
       });
-      console.log(res)
-      return res;
+      if(!(await res).statusCode === 201){
+        alert('Something went wrong on our side. Please retry submitting the TP. If this continues please contact our team.\n Sorry for the inconvenience.')
+        return
+      }else{
+        await this.$router.push({path: `/TP/${id}`});
+      }
     },
     async calcIndex(){
       const res = await fetch('api/training_plans')
