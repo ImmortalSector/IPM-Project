@@ -1,7 +1,8 @@
 <template>
   <div class="ex-card-container justify-content-center">
     <form>
-      <input type="checkbox" class="float-left my-checkbox" @change="$emit('exSelection', this.ex_card.id)"/>
+      <input v-if="this.isSelected" type="checkbox" class="float-left my-checkbox" @change="$emit('exSelection', this.ex_card.id)" checked/>
+      <input v-else type="checkbox" class="float-left my-checkbox" @change="$emit('exSelection', this.ex_card.id)"/>
     </form>
     <br>
     <br>
@@ -21,6 +22,7 @@ export default {
   },
   props : {
     ex_card: {},
+    isSelected: Boolean
   },
   data(){
     return {
@@ -37,7 +39,11 @@ export default {
     },
   },
   created() {
-
+    if(this.isSelected){
+      this.print(this.ex_card.name);
+    }else{
+     // this.print(false)
+    }
   }
 }
 </script>

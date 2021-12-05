@@ -185,83 +185,231 @@
   ],
   "training_plans": [
     {
+      "id": 0,
       "name": "TP_0",
       "type": "back",
-      "frequency": [1,0,1,0,1,0,0],
-      "period": 30,
-      "exercises": [
-          {
-          "id": 0,
-          "no_reps_instr": "2 reps",
-          "no_series": 2
-        },{
-          "id": 2,
-          "no_reps_instr": "2 reps",
-          "no_series": 2
-        }
-      ]
-    },
-    {
-      "name": "TP_1",
-      "type": "core",
-      "frequency": [1,0,1,0,1,0,0],
+      "frequency": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
       "period": 30,
       "exercises": [
         {
           "id": 0,
           "no_reps_instr": "2 reps",
           "no_series": 2
-        },{
+        },
+        {
           "id": 2,
           "no_reps_instr": "2 reps",
           "no_series": 2
         }
       ]
+    },
+    {
+      "id": 1,
+      "name": "TP_1",
+      "type": "core",
+      "frequency": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "period": 30,
+      "exercises": [
+        {
+          "id": 0,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },
+        {
+          "id": 2,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "testing_no_ex",
+      "type": "back",
+      "frequency": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "period": 14,
+      "exercises": []
+    },
+    {
+      "id": 3,
+      "name": "testing_add_with_ex",
+      "type": "chest",
+      "frequency": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "period": 12,
+      "exercises": [
+        {
+          "id": 0,
+          "no_reps_instr": "2",
+          "no_series": 2
+        },
+        {
+          "id": 1,
+          "no_reps_instr": "3",
+          "no_series": 23
+        },
+        {
+          "id": 7,
+          "no_reps_instr": "qwq",
+          "no_series": 21
+        },
+        {
+          "id": 9,
+          "no_reps_instr": "1",
+          "no_series": 2
+        },
+        {
+          "id": 2,
+          "no_reps_instr": "",
+          "no_series": 0
+        }
+      ]
     }
   ],
-  "exercise_tags_list": [{"name": "back"}, {"name": "chest"}, {"name": "legs"}, {"name": "full body"}, {"name": "push"}, {"name": "pull"}, {"name": "core"}, {"name": "arms"}],
+  "exercise_tags_list": [
+    {
+      "name": "back"
+    },
+    {
+      "name": "chest"
+    },
+    {
+      "name": "legs"
+    },
+    {
+      "name": "full body"
+    },
+    {
+      "name": "push"
+    },
+    {
+      "name": "pull"
+    },
+    {
+      "name": "core"
+    },
+    {
+      "name": "arms"
+    }
+  ],
   "exercise_list": [
     {
       "id": 0,
       "name": "Kettle Bell Swings",
-      "tags": ["back", "legs"]
+      "tags": [
+        "back",
+        "legs"
+      ]
     },
     {
       "id": 1,
       "name": "Barbell Deadlift ",
-      "tags": ["back", "legs"]
-    },{
+      "tags": [
+        "back",
+        "legs"
+      ]
+    },
+    {
       "id": 2,
       "name": "Pull Up",
-      "tags": ["back", "arms", "pull"]
-    },{
+      "tags": [
+        "back",
+        "arms",
+        "pull"
+      ]
+    },
+    {
       "id": 3,
       "name": "Lat Pulldown",
-      "tags": ["arms", "back", "pull"]
-    },{
+      "tags": [
+        "arms",
+        "back",
+        "pull"
+      ]
+    },
+    {
       "id": 4,
       "name": "Barbell Deadlift 2",
-      "tags": ["back", "legs"]
-    },{
+      "tags": [
+        "back",
+        "legs"
+      ]
+    },
+    {
       "id": 9,
       "name": "Leg Raises",
-      "tags": ["core"]
-    },{
+      "tags": [
+        "core"
+      ]
+    },
+    {
       "id": 5,
       "name": "Dips",
-      "tags": ["arms","chest","core", "push"]
-    },{
+      "tags": [
+        "arms",
+        "chest",
+        "core",
+        "push"
+      ]
+    },
+    {
       "id": 6,
       "name": "Push Ups",
-      "tags": ["arms","chest", "push"]
-    },{
+      "tags": [
+        "arms",
+        "chest",
+        "push"
+      ]
+    },
+    {
       "id": 7,
       "name": "That one that no one likes",
-      "tags": ["legs"]
-    },{
+      "tags": [
+        "legs"
+      ]
+    },
+    {
       "id": 8,
       "name": "You're a wizard harry",
-      "tags": ["back", "chest", "full body", "push", "pull", "core"]
+      "tags": [
+        "back",
+        "chest",
+        "full body",
+        "push",
+        "pull",
+        "core"
+      ]
     }
   ]
 }

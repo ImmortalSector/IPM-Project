@@ -28,8 +28,8 @@ export default {
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem ;
   /* min-height: 8rem;
   max-height: 8rem */
-  width:500px;
-  height:400px;
+  width:80vw;
+  max-height:40vh;
 
 }
 </style>
