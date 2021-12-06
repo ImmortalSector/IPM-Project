@@ -95,13 +95,16 @@ export default {
     print(msg){
       console.log(msg)
     },
+
     alert_not_implemented(e){
       e.preventDefault();
       alert("This feature is not yet implemented. Our team is giving their best to bring it to you!!")
     },
+
     OnSubmit(){
      // Empty
     },
+
     manageExerciseSelection(ex_id){
       const ex_obj = {
         id: ex_id,
@@ -196,6 +199,7 @@ export default {
         await this.$router.push({path: `/TP/${id}`});
       }
     },
+
     async calcIndex(){
       const res = await fetch('api/training_plans')
       const data = await res.json()
