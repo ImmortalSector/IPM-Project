@@ -39,6 +39,13 @@
       "comments": [
         {
           "author": "me",
+          "id": 3,
+          "text": "das",
+          "my_vote": 1,
+          "votes": 1
+        },
+        {
+          "author": "me",
           "id": 2,
           "text": ".lhkhl.k",
           "my_vote": 1,
