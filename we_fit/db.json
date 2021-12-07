@@ -4,10 +4,11 @@
       "id": 0,
       "title": "testingA",
       "user": "Oscar_69",
-      "likes": 2,
+      "likes": 1,
       "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "my_like": 1
+      "img_path": "../../assets/logo.png",
+      "my_like": 0,
+      "type": "Achievement"
     },
     {
       "id": 1,
@@ -16,7 +17,8 @@
       "likes": 7,
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
-      "my_like": 0
+      "my_like": 0,
+      "type": "Workout"
     },
     {
       "id": 2,
@@ -25,7 +27,8 @@
       "likes": 3,
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
-      "my_like": 0
+      "my_like": 0,
+      "type": "Achievement"
     }
   ],
   "post_cards_list": [
