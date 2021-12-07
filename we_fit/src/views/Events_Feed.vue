@@ -1,12 +1,20 @@
 <template>
   <h1>Events</h1>
-  <div class="left-align-absolute flex-row my-3" style="text-align: left">
-          <label class="form-label" for="typeInput"> Type: </label>
-          <select id="typeInput" v-model="this.type"  class="form-select" aria-label="Default select example" >
-            <option :value="ex_type.name" :key="ex_type.name" v-for="(ex_type) in this.exercise_types">{{ex_type.name}}</option>
-          </select>
-  </div>
   <EventsSearchBar @events_search_event="filterList"/>
+  <br>
+  <br>
+  <div class="d-inline-flex left-align-absolute flex-row">
+          <label class="form-label" for="typeInput" style="margin-right:1.2rem; font-size: x-large">Type</label>
+          <select id="typeInput" v-model="this.type"  class="form-select" aria-label="Default select example" >
+            <option :value="event_type.name" :key="event_type.name" v-for="(event_type) in this.event_types">{{event_type.name}}</option>
+          </select>
+
+          <Calendar style="margin-left:2.5rem;"/>
+
+          <input style="margin-left:2.5rem;" type="checkbox" id="myEvents" value="My Events" v-model="checkedMyEvents">
+          <label style="" for="myEvents">My Events</label>
+
+  </div>
   <events-post-cards-list @downvote="downvote" @upvote="upvote" :event_cards_list = "event_cards_list" />
   <AddEventPlusButton style="position: fixed; bottom: 0px; right: 0px; height: 5rem; width: 5rem" />
 </template>
@@ -15,19 +23,25 @@
 import EventsPostCardsList from "../components/Event_Components/EventPostCardsList.vue";
 import EventsSearchBar from "../components/Event_Components/EventsSearchBar.vue";
 import AddEventPlusButton from "../components/Event_Components/AddEventPlusButton.vue";
+import Calendar from "../components/Event_Components/Calendar.vue";
 export default {
   name: "Events_Feed",
   components: {
     AddEventPlusButton,
     EventsPostCardsList,
-    EventsSearchBar
+    EventsSearchBar,
+    Calendar
   },
   data() {
     return {
       event_cards_list: [],
       lastSearch: "",
+      type: "",
+      checkedMyEvents: null,
+      event_types: [{name: 'Challenge'}, {name: 'Competition'}, {name: 'Meeting'}],
     }
   },
+
   methods: {
 
     async fetchEventsPostCardsList (){
@@ -103,5 +117,17 @@ export default {
 </script>
 
 <style>
+  input[type='checkbox'] {
+    box-sizing: border-box;
+    appearance: none;
+    background: white;
+    outline: 2px solid #333;
+    border: 3px solid white;
+    width: 16px;
+    height: 16px;
+  }
 
+  input[type='checkbox']:checked {
+    background: #333;
+  }
 </style>
