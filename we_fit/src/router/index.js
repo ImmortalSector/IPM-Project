@@ -64,7 +64,7 @@ const routes = [
     props: true
   },
   {
-    path: '/TP',
+    path: '/TPs',
     name: 'TP_Feed',
     component: () => import('../views/TP_Feed.vue'),
   }

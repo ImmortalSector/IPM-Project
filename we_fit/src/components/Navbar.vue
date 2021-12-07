@@ -19,7 +19,7 @@
             <a class="nav-link active" id="navbar_forum"><router-link class="rl" to="/forum" >Forum</router-link></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" id="navbar_tp"><router-link class="rl" to="/TP">Training Plans</router-link></a>
+            <a class="nav-link active" id="navbar_tp"><router-link class="rl" to="/TPs">Training Plans</router-link></a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" id="navbar_profile"><router-link class="rl" to="/profile">Profile</router-link></a>
