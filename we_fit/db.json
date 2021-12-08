@@ -2,40 +2,43 @@
   "feed_post_cards_list": [
     {
       "id": 0,
-      "title": "testingA",
-      "user": "Oscar_69",
-      "likes": 2,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "my_like": 1
+      "title": "Ran 48km today!",
+      "user": "Oscar_68",
+      "likes": 1,
+      "description": "I did it!!! After 1 year of running, I got a new personal record of 43km in a day!",
+      "img_path": "https://i.imgur.com/cK55z07.png",
+      "my_like": 0,
+      "type": "Achievement"
     },
     {
       "id": 1,
-      "title": "testingB",
-      "user": "Oscar_68",
+      "title": "Created a new plan for 'Back'.",
+      "user": "Sigma_male_1",
       "likes": 7,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "my_like": 0
+      "description": "BIG BACK, BIG PLAN",
+      "img_path": "https://i.imgur.com/7D2qyhl.jpg",
+      "my_like": 0,
+      "type": "Workout"
     },
     {
       "id": 2,
-      "title": "testingC",
-      "user": "Oscar_67",
+      "title": "My first marathon!",
+      "user": "Maria do Céu",
       "likes": 3,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "my_like": 0
+      "description": "What a challenge!",
+      "img_path": "https://i.imgur.com/nsVZhkt.jpg",
+      "my_like": 0,
+      "type": "Achievement"
     }
   ],
   "post_cards_list": [
     {
       "id": 0,
       "title": "testing0",
-      "votes": -1,
+      "votes": -2,
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
-      "my_vote": 0,
+      "my_vote": -1,
       "comments": [
         {
           "author": "me",
@@ -70,10 +73,10 @@
     {
       "id": 1,
       "title": "testing1",
-      "votes": 6,
+      "votes": 8,
       "description": "Lorem ipsum dolor sit ameth",
       "img_path": "logo.png",
-      "my_vote": -1,
+      "my_vote": 1,
       "comments": [
         {
           "id": 0,
@@ -164,30 +167,51 @@
   "event_cards_list": [
     {
       "id": 0,
+      "type": "Challenge",
       "title": "testingEvent0",
-      "votes": -2,
+      "isPublic": false,
+      "startDate": "",
+      "endDate": "",
+      "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "my_vote": -1,
-      "comments": []
+      "invities": "",
+      "img_path": "logo.png"
     },
     {
       "id": 1,
+      "type": "Competition",
       "title": "testingEvent1",
-      "votes": 7,
+      "isPublic": false,
+      "startDate": "",
+      "endDate": "",
+      "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "my_vote": 0,
-      "comments": []
+      "invities": "",
+      "img_path": "logo.png"
     },
     {
       "id": 2,
+      "type": "Meeting",
       "title": "testingEvent2",
-      "votes": 3,
+      "isPublic": true,
+      "startDate": "",
+      "endDate": "",
+      "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "my_vote": 0,
-      "comments": []
+      "invities": "",
+      "img_path": "logo.png"
+    },
+    {
+      "id": 3,
+      "type": "Meeting",
+      "title": "testingEvent3",
+      "isPublic": false,
+      "startDate": "",
+      "endDate": "",
+      "rules": "",
+      "description": "Lorem ipsum dolor sit ameth",
+      "invities": "",
+      "img_path": "logo.png"
     }
   ],
   "training_plans": [

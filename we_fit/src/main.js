@@ -9,8 +9,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faSearch, faArrowUp, faArrowDown, faPlus, faShare, faCommentAlt, faCamera , faAngleDown, faAngleUp, faStar} from "@fortawesome/free-solid-svg-icons";
-
+import { faSearch, faArrowUp, faArrowDown, faPlus, faShare, faCommentAlt, faCamera , faAngleDown, faAngleUp, faThumbsUp, faMedal, faDumbbell} from "@fortawesome/free-solid-svg-icons";
 
 //Adicionar icons: https://stackoverflow.com/questions/66389974/using-font-awesome-in-vue-3
 library.add(faSearch);
@@ -22,5 +21,7 @@ library.add(faCommentAlt);
 library.add(faCamera);
 library.add(faAngleDown);
 library.add(faAngleUp);
-library.add(faStar)
+library.add(faThumbsUp);
+library.add(faMedal);
+library.add(faDumbbell);
 createApp(App).use(store).use(router).component("font-awesome-icon", FontAwesomeIcon).mount('#app')

@@ -1,17 +1,17 @@
 <template>
   <div class="container">
     <form @submit="OnSubmit">
-      <div class="form-group pb-3">
+      <div class="form-group pb-4">
         <p class="form-label">Title:</p>
         <input v-model="this.title" type="text" class="form-control form-title" id="titleInput" aria-describedby="titleHelp" placeholder="Enter an interesting title">
         <small id="titleHelp" class="form-text text-muted"></small>
       </div>
-      <div class="form-group mx-3">
+      <div class="form-group">
         <p class="form-label">Description:</p>
         <textarea v-model="this.description"  class="form-control form-desc" id="descInput" aria-describedby="descInput" placeholder="Enter an appropriate description"/>
         <small id="descHelp" class="form-text text-muted"></small>
       </div>
-      <div class="form-group flex-row end-row mx-3">
+      <div class="form-group flex-row end-row">
         <div class="form-group">
           <input type="checkbox" class="form-check-input  mx-2" id="notif">
           <label class="form-check-label" for="notif">Notify me!</label>

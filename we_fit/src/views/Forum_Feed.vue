@@ -1,8 +1,10 @@
 <template>
+<div>
   <h1>Forum</h1>
   <ForumSearchBar @forum_search_event="filterList"/>
   <forum-post-cards-list @downvote="downvote" @upvote="upvote" :post_cards_list = "post_cards_list" />
   <AddPostPlusButton style="position: fixed; bottom: 0px; right: 0px; height: 5rem; width: 5rem" />
+</div>
 </template>
 
 <script>
@@ -79,9 +81,8 @@ export default {
 
     async filterList(e, content){
       e.preventDefault();
-      if(content === ""){
-        this.post_cards_list = await this.fetchForumPostCardsList()
-      }else{
+      this.post_cards_list = await this.fetchForumPostCardsList()
+      if(content !== ""){
         this.post_cards_list = this.post_cards_list.filter((post) =>
             post.description.includes(content) || post.title.includes(content)
         )

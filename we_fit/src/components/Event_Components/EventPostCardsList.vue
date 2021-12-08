@@ -2,14 +2,14 @@
   <div class="py-5">
   </div>
   <div class="container">
-    <div class="row pb-2" :key = "event_card.id" v-for="event_card in event_cards_list">
-        <EventPostCard class="FPC" :event_card = "event_card"/>
+    <div class="row pb-2" :key = "post_card.id" v-for="post_card in event_cards_list">
+        <EventPostCard @downvote="$emit('downvote', post_card.id)" @upvote="$emit('upvote', post_card.id)" class="FPC" :post_card = "post_card"/>
     </div>
   </div>
 </template>
 
 <script>
-import EventPostCard from "../Forum_Components/EventPostCard";
+import EventPostCard from "../Event_Components/EventPostCard";
 export default {
   name: 'EventPostCardsList',
   components: {
