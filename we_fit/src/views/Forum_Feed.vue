@@ -81,9 +81,8 @@ export default {
 
     async filterList(e, content){
       e.preventDefault();
-      if(content === ""){
-        this.post_cards_list = await this.fetchForumPostCardsList()
-      }else{
+      this.post_cards_list = await this.fetchForumPostCardsList()
+      if(content !== ""){
         this.post_cards_list = this.post_cards_list.filter((post) =>
             post.description.includes(content) || post.title.includes(content)
         )

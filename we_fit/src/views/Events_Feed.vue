@@ -8,6 +8,7 @@
   <div class="container">
     <div class="row">
         <div class="col-sm">
+          <!-- <EventType @type="typeEventHandler" class="event-selector" /> change to this-->
           <label class="form-label" for="typeInput" style="margin-right:1.2rem; font-size: 16px">Type</label>
           <select id="typeInput" v-model="this.type"  class="form-select" aria-label="Default select example">
             <option :value="event_type.name" :key="event_type.name" v-for="(event_type) in this.event_types">{{event_type.name}}</option>
@@ -27,7 +28,9 @@
         </div>
     </div>
   </div>
+
   <events-post-cards-list :event_cards_list = "event_cards_list" />
+
   <AddEventPlusButton style="position: fixed; bottom: 0px; right: 0px; height: 5rem; width: 5rem" />
 </div>
 </template>
@@ -36,18 +39,22 @@
 import EventsPostCardsList from "../components/Event_Components/EventPostCardsList.vue";
 import EventsSearchBar from "../components/Event_Components/EventsSearchBar.vue";
 import AddEventPlusButton from "../components/Event_Components/AddEventPlusButton.vue";
+import EventType from "../components/Event_Components/EventType.vue";
 export default {
   name: "Events_Feed",
   components: {
     AddEventPlusButton,
     EventsPostCardsList,
-    EventsSearchBar
+    EventsSearchBar,
+    EventType
   },
   data() {
     return {
       event_cards_list: [],
+      current_event_cards_list: [],
+      currentType: "",
+      currentSearch: "",
       lastSearch: "",
-      type: "",
       startDate: "",
       endDate: "" ,
       checkedMyEvents: "",
@@ -56,6 +63,15 @@ export default {
   },
 
   methods: {
+
+    async typeEventHandler(e, type){
+      e.preventDefault();
+      this.event_cards_list = await this.fetchEventsPostCardsList()
+      if( type !== 'all'){
+        this.event_cards_list = this.event_cards_list.filter((event) => 
+          event.type.includes(type))
+      }
+    },
 
     onChangeStart() {
       if(this.endDate === null) {
@@ -81,47 +97,6 @@ export default {
       return data
     },
 
-    async upvote(id){
-      const taskToToggle = await this.fetchEventsPostCard(id)
-      const vote = (taskToToggle.my_vote > 0)? 0 : 1;
-      const score_update = (taskToToggle.my_vote <= 0)? ((taskToToggle.my_vote === 0) ? 1 : 2) : -1;
-      const updPostCard = { ...taskToToggle,votes: score_update + taskToToggle.votes, my_vote: vote }
-
-      const res = await fetch(`api/event_cards_list/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(updPostCard),
-      })
-
-      const data = await res.json()
-      this.event_cards_list = this.event_cards_list.map((post) =>
-          post.id === id ? { ...post,votes: score_update + taskToToggle.votes, my_vote: data.my_vote } : post
-      )
-    },
-
-    async downvote(id){
-      const taskToToggle = await this.fetchEventsPostCard(id)
-      const vote = (taskToToggle.my_vote < 0)? 0 : -1;
-      const score_update = (taskToToggle.my_vote >= 0)? ((taskToToggle.my_vote === 0) ? -1 : -2) : 1;
-      const updPostCard = { ...taskToToggle, votes: score_update + taskToToggle.votes, my_vote: vote }
-
-      const res = await fetch(`api/event_cards_list/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(updPostCard),
-      })
-
-      const data = await res.json()
-
-      this.event_cards_list = this.event_cards_list.map((post) =>
-          post.id === id ? { ...post, votes: score_update + taskToToggle.votes, my_vote: data.my_vote } : post
-      )
-    },
-
     async fetchEventsPostCard(id) {
       const res = await fetch(`api/event_cards_list/${id}`)
       const data = await res.json()
@@ -130,9 +105,8 @@ export default {
 
     async filterList(e, content){
       e.preventDefault();
-      if(content === ""){
         this.event_cards_list = await this.fetchEventsPostCardsList()
-      }else{
+      if(content !== ""){
         this.event_cards_list = this.event_cards_list.filter((post) =>
             post.description.includes(content) || post.title.includes(content)
         )
@@ -143,6 +117,7 @@ export default {
   },
   async created() {
     this.event_cards_list = await this.fetchEventsPostCardsList()
+    this.current_event_cards_list = this.event_cards_list;
   },
 }
 </script>
