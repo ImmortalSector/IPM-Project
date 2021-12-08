@@ -1,11 +1,9 @@
 <template>
-  <div class="container" style="">
-      <div class="row align-items-center title-row" style="font-size: xx-large">
-        <span style="color:#5F0B19">{{ post_card.user}}:</span> {{ post_card.title }}
+  <div class="container pt-3" style="">
+      <div class="row align-items-start title-row d-inline" style="font-size: xx-large; text-align: start; flex-wrap: nowrap">
+        <span style="color:#980000">{{ post_card.user}}:</span> <span>{{ post_card.title }}</span>
       </div>
-      <!-- <img class="image_thumbnail  img-row align-items-center" alt="WeFit logo" :src="'../../assets/' + post_card.img_path"> -->
-        <!-- <img class="image_thumbnail  img-row align-items-center" alt="WeFit logo" v-bind:src="`${post_card.img_path}`" > -->
-        <img class="image_post img-row align-items-center" alt="Image Post" :src="post_card.img_path" >
+      <img class="image_post img-row align-items-center" alt="Image Post" :src="post_card.img_path" >
         <!-- <img class="image_thumbnail img-row align-items-center" alt="WeFit logo" src="../../assets/logo.png"> -->
       <div>
         {{post_card.description}}
@@ -66,7 +64,6 @@ export default {
     font-size: large;
   }
   .img-row{
-    background-color: #FFFFFF;
     justify-content: center;
     align-content: center;
     object-position: center;

@@ -16,8 +16,8 @@
         </div>
         <br><br>
         <div class="d-inline-flex left-align-absolute flex-row">
-          <label class="form-label" for="myEvents" style="margin-right:1.2rem; font-size: large">My Events</label>
-          <input type="checkbox" id="myEvents" value="My Events" v-model="this.make_public">
+          <label class="form-label force-text-centered" for="myEvents" style="margin-right:1.2rem; font-size: large">My Events</label>
+          <input type="checkbox" id="myEvents" value="My Events" v-model="this.make_public" class="align-self-center">
         </div>
         <br><br>
         <div class="d-inline-flex left-align-absolute flex-row">
@@ -36,13 +36,11 @@
           <div class="form-group mt-5">
             <p class="form-label left-align-absolute" style="font-size: x-large">Rule Set:</p>
             <textarea v-model="this.ruleSet"  class="form-control form-desc" id="ruleInput" aria-describedby="ruleInput" placeholder="Enter the desired rules"/>
-            <small id="descHelp" class="form-text text-muted"></small>
           </div>
         <br><br>
           <div class="form-group">
             <p class="form-label left-align-absolute" style="font-size: x-large">Description:</p>
             <textarea v-model="this.description"  class="form-control form-desc" id="descInput" aria-describedby="descInput" placeholder="Enter an appropriate description"/>
-            <small id="descHelp" class="form-text text-muted"></small>
           </div>
 
       </div>
@@ -55,7 +53,7 @@
     </div>
   </form>
 
-  <div class="flex-row" style="margin:100px; display: flex; flex-direction: row-reverse">
+  <div class="flex-row justify-content-between" style="margin:100px; display: flex; flex-direction: row-reverse">
     <button class="submit-btn btn btn-dark" @click="Invite">Invite People</button>
     <button class="submit-btn btn btn-dark" @click="AddEvent">Add Event</button>
   </div>
@@ -164,5 +162,9 @@ input[type='checkbox'] {
 
 input[type='checkbox']:checked {
   background: #333;
+}
+
+.force-text-centered{
+  margin-top: 0.5em;
 }
 </style>

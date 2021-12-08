@@ -9,12 +9,15 @@
       </div>
   </div>
 </div>
+  <AddTPPlusButton style="position: fixed; bottom: 0px; right: 0px; height: 5rem; width: 5rem"/>
 </template>
 <script>
 import TPFeedCard from "../components/TP_Components/TPFeedCard";
+import AddTPPlusButton from "../components/TP_Components/AddTPPlusButton";
 export default {
   name: "",
   components: {
+    AddTPPlusButton,
     TPFeedCard
 
   },

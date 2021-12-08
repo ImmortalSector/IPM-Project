@@ -39,14 +39,14 @@
 import EventsPostCardsList from "../components/Event_Components/EventPostCardsList.vue";
 import EventsSearchBar from "../components/Event_Components/EventsSearchBar.vue";
 import AddEventPlusButton from "../components/Event_Components/AddEventPlusButton.vue";
-import EventType from "../components/Event_Components/EventType.vue";
+//import EventType from "../components/Event_Components/EventType.vue";
 export default {
   name: "Events_Feed",
   components: {
     AddEventPlusButton,
     EventsPostCardsList,
     EventsSearchBar,
-    EventType
+    //EventType
   },
   data() {
     return {
