@@ -2,31 +2,31 @@
   "feed_post_cards_list": [
     {
       "id": 0,
-      "title": "testingA",
-      "user": "Oscar_69",
+      "title": "Ran 48km today!",
+      "user": "Oscar_68",
       "likes": 1,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "../../assets/logo.png",
+      "description": "I did it!!! After 1 year of running, I got a new personal record of 43km in a day!",
+      "img_path": "https://i.imgur.com/cK55z07.png",
       "my_like": 0,
       "type": "Achievement"
     },
     {
       "id": 1,
-      "title": "testingB",
-      "user": "Oscar_68",
+      "title": "Created a new plan for 'Back'.",
+      "user": "Sigma_male_1",
       "likes": 7,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
+      "description": "BIG BACK, BIG PLAN",
+      "img_path": "https://i.imgur.com/7D2qyhl.jpg",
       "my_like": 0,
       "type": "Workout"
     },
     {
       "id": 2,
-      "title": "testingC",
-      "user": "Oscar_67",
+      "title": "My first marathon!",
+      "user": "Maria do Céu",
       "likes": 3,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
+      "description": "What a challenge!",
+      "img_path": "https://i.imgur.com/nsVZhkt.jpg",
       "my_like": 0,
       "type": "Achievement"
     }
