@@ -1,26 +1,35 @@
 <template>
+<div>
   <h1>Events</h1>
   <EventsSearchBar @events_search_event="filterList"/>
   <br>
   <br>
-  <div class="d-inline-flex left-align-absolute flex-row">
-          <label class="form-label" for="typeInput" style="margin-right:1.2rem; font-size: x-large">Type</label>
-          <select id="typeInput" v-model="this.type"  class="form-select" aria-label="Default select example" >
+  <!-- <div class="d-inline-flex left-align-absolute flex-row"> -->
+  <div class="container">
+    <div class="row">
+        <div class="col-sm">
+          <label class="form-label" for="typeInput" style="margin-right:1.2rem; font-size: 16px">Type</label>
+          <select id="typeInput" v-model="this.type"  class="form-select" aria-label="Default select example">
             <option :value="event_type.name" :key="event_type.name" v-for="(event_type) in this.event_types">{{event_type.name}}</option>
           </select>
-         
-          <label class="form-label" for="startDate" style="margin-right:1.2rem; font-size: x-large">Start Date </label>
-          <input @change="onChangeStart()" class="form-control" type="date" id="startDate" name="startDate" min="2021-07-01" placeholder="Enter Date..." v-model="startDate">
-
-          <label class="form-label" for="endDate" style="margin-right:1.2rem; font-size: x-large">End Date</label>
-          <input @change="onChangeEnd()" class="form-control" type="date" id="endDate" name="endDate" min="2021-07-01" placeholder="Enter Date..." v-model="endDate">
-
-          <label class="form-label" for="myEvents" style="margin-right:1.2rem; font-size: x-large">My Events</label>
-          <input style="margin-left:2.5rem;" type="checkbox" id="myEvents" value="My Events" v-model="checkedMyEvents">
-
+        </div>
+        <div class="col-sm">
+          <label class="form-label" for="startDate" style="margin-right:1.2rem; font-size: 16px">Start Date </label>
+          <input @change="onChangeStart()" class="form-control" type="date" id="startDate" name="startDate" min="2021-07-01" placeholder="Enter Date..." v-model="this.startDate">
+        </div>
+        <div class="col-sm">
+          <label class="form-label" for="endDate" style="margin-right:1.2rem; font-size: 16px">End Date</label>
+          <input @change="onChangeEnd()" class="form-control" type="date" id="endDate" name="endDate" min="2021-07-01" placeholder="Enter Date..." v-model="this.endDate">
+        </div>
+        <div class="col-sm">
+          <label class="form-label" for="myEvents" style="margin-right:1.2rem; font-size: 16px">My Events</label>
+          <input style="width: 16px; height: 16px" type="checkbox" id="myEvents" value="My Events" v-model="checkedMyEvents">
+        </div>
+    </div>
   </div>
   <events-post-cards-list :event_cards_list = "event_cards_list" />
   <AddEventPlusButton style="position: fixed; bottom: 0px; right: 0px; height: 5rem; width: 5rem" />
+</div>
 </template>
 
 <script>
@@ -41,6 +50,7 @@ export default {
       type: "",
       startDate: "",
       endDate: "" ,
+      checkedMyEvents: "",
       event_types: [{name: 'Challenge'}, {name: 'Competition'}, {name: 'Meeting'}],
     }
   },

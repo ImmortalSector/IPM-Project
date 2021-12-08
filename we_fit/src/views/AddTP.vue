@@ -19,7 +19,7 @@
         <br>
         <div class="left-align-absolute flex-row my-3 align-content-center" style="text-align: left">
           <p class="form-label align-items-center align-items-center justify-content-center" for="howlongInput" style="font-size: large; margin-right: 10px">How many days:</p>
-          <input v-model="this.period" type="number" class="form-control-sm my-days-input" id="howlongInput" placeholder="Training Plan Name">
+          <input v-model="this.period" type="number" min="0" class="form-control-sm my-days-input" id="howlongInput" placeholder="Training Plan Name">
         </div>
         <br>
         <br>
@@ -30,7 +30,7 @@
        </div>
       <div class="col-6">
         <button class="addPhoto rounded-circle btn-outline-dark" @click.prevent="alert_not_implemented">
-          Add Pictures
+          Add Picture
           <font-awesome-icon icon="camera"/>
         </button>
       </div>

@@ -8,7 +8,7 @@
 
           <div class="pls-just-fit-already-series d-inline">
             <label :for="'series'+this.ex_card.name" class="px-4">series</label>
-            <input v-model="this.series_val" :id="this.ex_card.name" type="number" class="" @input="$emit('seriesUpdate', this.series_val, this.ex_card.id)">
+            <input v-model="this.series_val" :id="this.ex_card.name" type="number" min="0" class="" @input="$emit('seriesUpdate', this.series_val, this.ex_card.id)">
           </div>
         <br>
           <div class="pls-just-fit-already-reps d-inline" >

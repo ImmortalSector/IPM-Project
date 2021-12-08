@@ -1,8 +1,10 @@
 <template>
+<div>
   <h1>Forum</h1>
   <ForumSearchBar @forum_search_event="filterList"/>
   <forum-post-cards-list @downvote="downvote" @upvote="upvote" :post_cards_list = "post_cards_list" />
   <AddPostPlusButton style="position: fixed; bottom: 0px; right: 0px; height: 5rem; width: 5rem" />
+</div>
 </template>
 
 <script>
