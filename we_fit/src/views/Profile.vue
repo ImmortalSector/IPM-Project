@@ -38,27 +38,78 @@
   </div>
   <h1 class="pt-5"><b>Dashboard</b></h1>
   <div class="container">
-    <div class="row d-flex-imline justify-content-start mt-5">
-      <div class="col-auto">
-        <h3>Calorie Consumption</h3>
-        <input  type="date" @click="alert_not_working" class=" very-tiny mb-4 ml-3"/>
+
+    <div class="row d-flex-inline justify-content-between mt-5 w-100">
+
+      <div class="col-auto d-flex flex-wrap">
+        <div class="container">
+          <h3 class="align-self-start row">Calorie Consumption</h3>
+          <div class="row">
+            <input  type="date" @click="alert_not_working" class="align-self-start mb-4 ml-3 col-6 mr-1" style="height: 30px; font-size: smaller"/>
+            <button @click="alert_not_working" class="btn btn-outline-dark align-self-start mb-4 ml-3 mr-3 col-5" style="height: 30px; font-size: smaller">Add Today</button>
+          </div>
+          <div class="col-1" style="object-fit: contain">
+            <img style="object-fit: contain; width: 30vw" alt="WeFit" src="../assets/profile_cal_bars.png" @click="alert_not_working">
+          </div>
+        </div>
+      </div>
+
+      <div class="container col-6">
+        <div class="row d-inline-flex justify-content-between w-75 flex-nowrap" >
+          <h3 class="align-self-start" style="text-align: start; margin-top: 0.15em">Achievements: </h3>
+          <router-link to="/addTP" class="col">
+            <button class="col-auto btn btn-outline-dark" @click="alert_not_working" style="width: 2.5em; height: 2.5em"><font-awesome-icon icon="plus" style="object-fit: contain"/></button>
+          </router-link>
+        </div>
+        <div class="row d-flex justify-content-between">
+
+          <div class="col-8 d-flex flex-wrap">
+            <ProfileAchievementHolder class="w-75" style="border: 1px solid #333333; align-self: start; margin-left: 15vh"/>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="row d-flex justify-content-between col-3 mt-5 w-100 pb-5">
+
+      <div class="col-4 container d-flex" style="align-self: start; margin-left: 0; flex-wrap: wrap">
+        <div class="row d-inline-flex justify-content-between align-self-start flex-nowrap">
+          <h3 class="col-auto" style="margin-top: 0.20em;">Fluid Intake</h3>
+          <button class="col-auto btn btn-outline-dark" @click="alert_not_working" style="width: 2.5em; height: 2.5em"><font-awesome-icon icon="plus" style="object-fit: contain"/></button>
+        </div>
+        <div class="row">
+          <img style="object-fit: contain; width: 30vw" class="fluid-intake " alt="WeFit" src="../assets/fluid-intake.png" @click="alert_not_working">
+        </div>
+      </div>
+
+      <div class="col-6 container">
+        <div class="row d-inline-flex justify-content-between w-75 flex-nowrap" >
+          <h3 class="align-self-start" style="text-align: start; margin-top: 0.15em">Training Plans: </h3>
+          <router-link to="/addTP" class="col">
+            <button class="col-auto btn btn-outline-dark" @click="alert_not_working" style="width: 2.5em; height: 2.5em"><font-awesome-icon icon="plus" style="object-fit: contain"/></button>
+          </router-link>
+        </div>
+        <div class="row d-flex justify-content-end ml-0">
+          <ProfileTrainingPlan />
+        </div>
       </div>
     </div>
-    <div class="row d-flex align-items-start col-3">
-      <img class=" " alt="WeFit" src="../assets/profile_cal_bars.png" @click="alert_not_working">
-    </div>
-    <div class="row d-flex align-items-start col-3 mt-5">
-      <h3>Fluid Intake</h3>
-      <img class="fluid-intake " alt="WeFit" src="../assets/fluid-intake.png" @click="alert_not_working">
-    </div>
+
   </div>
 </template>
 
 <script>
 import ProfileAchievementCard from "../components/Profile_Components/ProfileAchievmentCard";
+import ProfileAchievementHolder from "../components/Profile_Components/ProfileAchievmentsHolder";
+import ProfileTrainingPlan from "../components/Profile_Components/ProfileTrainingPlans";
 export default {
   name: "Profile",
   components: {
+    ProfileTrainingPlan,
+    ProfileAchievementHolder,
     ProfileAchievementCard
   },
   data(){
@@ -132,6 +183,5 @@ export default {
   color: #5F0B19;
 }
 .very-tiny{
-  width: 5vh;
 }
 </style>
