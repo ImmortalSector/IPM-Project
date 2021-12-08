@@ -167,35 +167,51 @@
   "event_cards_list": [
     {
       "id": 0,
+      "type": "Challenge",
       "title": "testingEvent0",
-      "votes": -2,
+      "isPublic": false,
+      "startDate": "",
+      "endDate": "",
+      "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "comments": []
+      "invities": "",
+      "img_path": "logo.png"
     },
     {
       "id": 1,
+      "type": "Competition",
       "title": "testingEvent1",
-      "votes": 7,
+      "isPublic": false,
+      "startDate": "",
+      "endDate": "",
+      "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "comments": []
+      "invities": "",
+      "img_path": "logo.png"
     },
     {
       "id": 2,
+      "type": "Meeting",
       "title": "testingEvent2",
-      "votes": 3,
+      "isPublic": true,
+      "startDate": "",
+      "endDate": "",
+      "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "comments": []
+      "invities": "",
+      "img_path": "logo.png"
     },
     {
       "id": 3,
+      "type": "Meeting",
       "title": "testingEvent3",
-      "votes": 5,
+      "isPublic": false,
+      "startDate": "",
+      "endDate": "",
+      "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
-      "comments": []
+      "invities": "",
+      "img_path": "logo.png"
     }
   ],
   "training_plans": [
