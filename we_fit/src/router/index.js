@@ -52,6 +52,22 @@ const routes = [
     component: () => import('../views/ForumPostDetail.vue'),
     props: true
   },
+  {
+    path: '/addTP',
+    name: 'AddTP',
+    component: () => import('../views/AddTP.vue')
+  },
+  {
+    path: '/TP/:id',
+    name: 'TPDetail',
+    component: () => import('../views/TPDetail.vue'),
+    props: true
+  },
+  {
+    path: '/TPs',
+    name: 'TP_Feed',
+    component: () => import('../views/TP_Feed.vue'),
+  }
 
 ]
 

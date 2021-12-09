@@ -2,7 +2,7 @@
   <hr class="divider">
   <h3 style="text-align: left; ">Comment Section</h3>
   <div :key = "comment.id" v-for="comment in this.comments" >
-      <ForumCommentCard :id="this.id"/>
+      <ForumCommentCard :post_id="this.id" :comment_id="comment.id"/>
   </div>
 </template>
 <script>
@@ -15,16 +15,18 @@ export default {
       comments: [],
     }
   },
-  props: ['id'],
+  props: {
+    id: {},
+  },
   async created() {
-    console.log("CommentSection")
-    const foo_id = this.id
-    console.log('api/post_cards_list/'+foo_id)
+    //console.log("CommentSection")
+    //const foo_id = parseInt(this.id)
+    //console.log('api/post_cards_list/' + foo_id)
     const res = await fetch(`api/post_cards_list/${this.id}`)
-    console.log(this.id)
+    //console.log(this.id)
     const data = await res.json()
     this.comments = data.comments
-    console.log(this.comments)
+    //console.log(this.comments)
   },
   methods : {
     my_debug(){

@@ -4,27 +4,17 @@
 
       <div class="col-1 justify-content-center" style="max-height: 100%">
         <form style="max-height: 100%; height:100%">
-          <div class="row voting-element">
-            <button @click="$emit('upvote', post_card.id)" :class="[post_card.my_vote === 1 ? 'vote-button-selected' : 'vote-button']">
-              <font-awesome-icon class="voting-element justify-content-center" icon="arrow-up" style="height: 2vh; width: 2vw"/>
-            </button>
-          </div>
-          <div class="row voting-element justify-content-center vote-count"> {{ post_card.votes }} </div>
-          <div class="row voting-element">
-            <button @click="$emit('downvote', post_card.id)" :class="[post_card.my_vote === -1 ? 'vote-button-selected' : 'vote-button']">
-            <font-awesome-icon class="voting-element justify-content-center" icon="arrow-down" style="height: 2vh; width: 2vw"/>
-            </button>
-          </div>
+          
         </form>
       </div>
       <div class="col-3 justify-content-center" style="max-height: 100%">
-        <router-link class="rl" to="/events" >
-        <img class="image_thumbnail " alt="WeFit logo" src="../assets/logo.png">
+        <router-link class="rl" :to="{name: 'EventPost', params: {id: post_card.id}}" >
+        <img class="image_thumbnail " alt="WeFit logo" src="../../assets/logo.png">
         <!--img class="image_thumbnail" :src="'~'+imgPath + post_card.img_path"  :alt="imgPath + post_card.img_path"/-->
         </router-link>
       </div>
       <div class="col-auto justify-content-center">
-        <router-link class="rl" :to="{name: 'ForumPost', params: {id: post_card.id}}" >
+        <router-link class="rl" :to="{name: 'EventPost', params: {id: post_card.id}}" >
         <div class="container">
           <div class="row align-items-start" style="font-size: xx-large">
               {{ post_card.title }}
@@ -41,10 +31,9 @@
   </div>
 </template>
 
-
 <script>
 export default {
-  name: 'ForumPostCard',
+  name: 'EventPostCard',
   data () {
     return {
       imgPath: "../assets/"

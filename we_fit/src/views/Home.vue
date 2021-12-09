@@ -8,7 +8,7 @@
 
 <script>
 // @ is an alias to /src
-import FeedPostCardsList from "../components/FeedPostCardsList";
+import FeedPostCardsList from "../components/Feed_Components/FeedPostCardsList";
 export default {
   name: 'Feed',
   components: {

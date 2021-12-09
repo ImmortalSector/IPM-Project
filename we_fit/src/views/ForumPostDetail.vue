@@ -10,17 +10,25 @@
       <p class="post-description">
         {{ post.description }}
       </p>
-      <PostVoteBar @downvote_post="downvote" @upvote_post="upvote" :post="post" style="max-height: 5vh"/>
+      <PostVoteBar @downvote_post="downvote" @upvote_post="upvote" @new_comment_tab="toggleNewCommentArea" :post="post" :add_comment="true" :area_toggled="this.showAddComment" style="max-height: 5vh"/>
+      <form @submit="onSubmit" v-if="showAddComment" class="comment-text-input">
+        <div class="comment-text-input mt-3">
+          <textarea v-model="this.newCommentText" type="textarea" class="form-control comment-text-input" id="new_comment_text"  placeholder="Enter your comment"/>
+          <button  class="btn btn-dark btn-lg my-2"  type="submit" style="height: 25px; font-size: 15px;">
+            submit
+          </button>
+        </div>
+      </form>
     </div>
     <div class="row">
-      <comment-section :id="this.post.id"/>
+      <comment-section  :id="this.id" :key="commentSectionSession"/>
     </div>
   </div>
 </template>
 
 <script>
 import PostVoteBar from "../components/PostVoteBar";
-import CommentSection from "../components/CommentSection";
+import CommentSection from "../components/Forum_Components/CommentSection";
 export default{
   name: "ForumPostDetail",
   components: {
@@ -30,7 +38,10 @@ export default{
   props: ['id'],
   data() {
     return {
-      post: {}
+      post: {},
+      showAddComment: false,
+      newCommentText: '',
+      commentSectionSession: 0,
     };
   },
   methods : {
@@ -41,6 +52,9 @@ export default{
 
       return data
     },
+    toggleNewCommentArea(){
+      this.showAddComment = ! this.showAddComment;
+    },
     async upvote(){
       const postChange = this.post
       const vote = (postChange.my_vote > 0)? 0 : 1;
@@ -48,6 +62,8 @@ export default{
       const updPostCard = { ...postChange,votes: score_update + postChange.votes, my_vote: vote }
       console.log(updPostCard)
       this.post = updPostCard
+      this.updatePostOnDb(this.post)
+
     },
 
     async downvote(){
@@ -57,15 +73,50 @@ export default{
       const updPostCard = { ...postChange, votes: score_update + postChange.votes, my_vote: vote }
       console.log(updPostCard)
       this.post = updPostCard
-    },
+      this.updatePostOnDb(this.post)
 
+    },
+    async onSubmit(){
+      //alert(e)
+      //e.preventDefault() // Se der merda remover
+      if(!this.newCommentText){
+        alert('Please write a comment on the box above before submitting.')
+        return
+      }
+      const author = 'me';
+      const id = this.post.comments.length;
+      const text = this.newCommentText;
+      const my_vote = 1;
+      const votes = 1;
+      this.post.comments.unshift({
+        'author': author,
+        'id': id,
+        'text': text,
+        'my_vote': my_vote,
+        'votes': votes
+      });
+      //const newpost = {...this.post, 'comments': new_comments_list};
+      //console.log(this.post.comments, 'the new vec', this.post);
+      this.updatePostOnDb(this.post);
+      this.newCommentText = '';
+      this.commentSectionSession ++;
+    },
+    async updatePostOnDb(post){
+      await fetch(`api/post_cards_list/${this.post.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(post),
+      })
+    }
   },
   async created() {
     console.log("ForumPostDetails")
     const res = await fetch(`api/post_cards_list/${this.id}`)
     const data = await res.json()
     this.post = data
-    //console.log(this.post)
+
   },
 };
 
@@ -117,5 +168,18 @@ export default{
   font-size: 1rem;
   font-weight: bold;
 }
+.comment-text-input{
+  overflow: auto;
+  min-height: 10vh;
+  height: 100%;
+  width: 100%;
+}
 
+.btn-lg{
+  padding: 0 0 0 0;
+  align-content: center;
+  align-items: center;
+  width: 10vw;
+  height: 20vh;
+}
 </style>
