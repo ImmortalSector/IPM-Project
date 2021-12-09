@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="row" v-for="ex in exercises" :key="ex.id">
-      <TPExDetailCard :exercise="ex" :exercise_details="this.getCorrespondingExerciseInfo(ex.id)"/>
+    <div class="row" v-for="ex in this.exercises" :key="ex.id">
+      <TPExDetailCard :ex_id="ex.id" :post_id="this.post_id" />
     </div>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
   },
   props : {
     exercises:{},
-
+    post_id: Number,
   },
   data(){
     return {
@@ -28,22 +28,10 @@ export default {
     debug(e){
       e.preventDefault()
     },
-    getCorrespondingExerciseInfo(id){
-      console.log('iterating for',id)
-      for(let i = 0; i < this.all_exercises.length ; i++){
-        console.log('ex details id',this.all_exercises[i].id)
-        if(this.all_exercises[i].id === id){
-            console.log('hit on ',id)
-            return this.all_exercises[i];
-          }
-      }
-      console.log('miss')
-      return null;
-    },
-    async get_exercise_list(){
-      const res = await fetch(`api/exercise_list`);
-      return res.json();
-    },
+
+    async sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
   },
   async created() {
     this.all_exercises = await this.get_exercise_list();

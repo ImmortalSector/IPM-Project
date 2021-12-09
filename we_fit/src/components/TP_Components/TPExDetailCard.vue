@@ -19,12 +19,14 @@ export default {
   components: {
   },
   props : {
-    exercise_details: {},
-    exercise: {},
+
+    ex_id: Number,
+    post_id: Number,
   },
   data(){
     return {
-
+      exercise: {},
+      exercise_details: {},
     }
   },
   methods : {
@@ -35,9 +37,38 @@ export default {
       e.preventDefault()
 
     },
+    async getTP(){
+      const res = await fetch(`api/training_plans/${this.post_id}`)
+      return res.json();
+    },
+    getCorrespondingExerciseInfo(id, all_exercises){
+      for(let i = 0; i < all_exercises.length ; i++){
+        if(all_exercises[i].id === id){
+          return all_exercises[i];
+        }
+      }
+      return null;
+    },
+    async get_exercise_list(){
+      const res = await fetch(`api/exercise_list`);
+      return res.json();
+    },
   },
-  created() {
+  async created() {
+    const exs_details = await this.get_exercise_list();
+    const exs = (await this.getTP()).exercises;
+    console.log('prep: ex id', this.ex_id, ' from ', this.post_id);
 
+    for(let i = 0; i<exs.length; i++){
+      if(exs[i].id === this.ex_id){
+        this.exercise = exs[i];
+
+        this.exercise_details = this.getCorrespondingExerciseInfo(exs[i].id, exs_details);
+        console.log(this.exercise, this.exercise_details);
+        return
+      }
+    }
+    console.log('failed to load exercise', exs, exs_details);
   }
 }
 </script>

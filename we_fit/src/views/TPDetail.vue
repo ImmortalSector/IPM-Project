@@ -21,7 +21,7 @@
     </div>
     <div class="row d-flex justify-content-center align-items-center">
       <p class="w-75" style="text-align: left; font-size: 2rem;">Exercises</p>
-      <TPExerciseList class="w-75" :exercises="this.exercises"/>
+      <TPExerciseList class="w-75" :exercises="this.exercises" :post_id="this.id"/>
     </div>
   </div>
 
@@ -79,7 +79,8 @@ export default {
     this.type = this.post.type;
     this.period = this.post.period;
     this.extractFrequency(this.post.frequency);
-    this.exercises = this.post.exercises;
+    this.exercises =  this.post.exercises;
+    console.log(this.exercises)
   }
 }
 </script>
