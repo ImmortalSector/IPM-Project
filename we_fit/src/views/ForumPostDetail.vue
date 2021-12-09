@@ -83,18 +83,20 @@ export default{
         alert('Please write a comment on the box above before submitting.')
         return
       }
+      console.log(this.post.comments);
       const author = 'me';
       const id = this.post.comments.length;
       const text = this.newCommentText;
       const my_vote = 1;
       const votes = 1;
-      this.post.comments.unshift({
+      this.post.comments.push({
         'author': author,
         'id': id,
         'text': text,
         'my_vote': my_vote,
         'votes': votes
       });
+      console.log(this.post.comments);
       //const newpost = {...this.post, 'comments': new_comments_list};
       //console.log(this.post.comments, 'the new vec', this.post);
       this.updatePostOnDb(this.post);

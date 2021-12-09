@@ -2,7 +2,7 @@
   <div class="container w-100 align-content-start align-items-start">
     <div class="row d-inline-flex flex-row justify-content-start text-to-left w-100">
       <p class="col-auto">
-        <span class="name float-start text-to-left ms-auto">{{this.name}}</span><span class="type float-start ms-auto">#{{this.type}}</span>
+        <span class="name float-start text-to-left ms-auto" style="margin-top: 0.25em;">{{this.name}}</span><span class="type float-start ms-auto">#{{this.type}}</span>
       </p>
       <div class="col-auto"></div>
     </div>
@@ -21,7 +21,7 @@
     </div>
     <div class="row d-flex justify-content-center align-items-center">
       <p class="w-75" style="text-align: left; font-size: 2rem;">Exercises</p>
-      <TPExerciseList class="w-75" :exercises="this.exercises"/>
+      <TPExerciseList class="w-75" :exercises="this.exercises" :post_id="this.id"/>
     </div>
   </div>
 
@@ -79,7 +79,8 @@ export default {
     this.type = this.post.type;
     this.period = this.post.period;
     this.extractFrequency(this.post.frequency);
-    this.exercises = this.post.exercises;
+    this.exercises =  this.post.exercises;
+    console.log(this.exercises)
   }
 }
 </script>

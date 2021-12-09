@@ -120,6 +120,30 @@
     },
     {
       "id": 3,
+      "title": "Plank Posture",
+      "votes": 50,
+      "description": "After planking I get back pain. What can I do to fix this?",
+      "img_path": "logo.png",
+      "my_vote": 0,
+      "comments": [
+        {
+          "id": 0,
+          "author": "Sigma_male_1",
+          "text": "Contract those glutes for stability",
+          "my_vote": 0,
+          "votes": 2000
+        },
+        {
+          "id": 1,
+          "author": "Ellen_Degenerate",
+          "text": "Focus more on your contraction of glutes, core and back. If it still hurts try to start on a declined plank",
+          "my_vote": 0,
+          "votes": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
       "title": "dgf",
       "votes": 1,
       "description": "fds",
@@ -128,37 +152,10 @@
       "comments": []
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "sa",
       "votes": 1,
       "description": "sa",
-      "img_path": "logo.png",
-      "my_vote": 1,
-      "comments": []
-    },
-    {
-      "id": 5,
-      "title": "dsfdfs",
-      "votes": 1,
-      "description": "dfsfd",
-      "img_path": "logo.png",
-      "my_vote": 1,
-      "comments": []
-    },
-    {
-      "id": 6,
-      "title": "saddsa",
-      "votes": 1,
-      "description": "asdd",
-      "img_path": "logo.png",
-      "my_vote": 1,
-      "comments": []
-    },
-    {
-      "id": 7,
-      "title": "sadsad",
-      "votes": 1,
-      "description": "sadsd",
       "img_path": "logo.png",
       "my_vote": 1,
       "comments": []
@@ -169,21 +166,36 @@
       "id": 0,
       "type": "Challenge",
       "title": "testingEvent0",
+      "creator": "Ana",
       "isPublic": false,
-      "startDate": "",
-      "endDate": "",
-      "rules": "",
+      "startDate": "2021-11-30",
+      "endDate": "2021-12-03",
+      "rules": "You have to run nonstop!",
       "description": "Lorem ipsum dolor sit ameth",
-      "invities": "",
+      "invities": [
+        {
+          "name": "Ana"
+        },
+        {
+          "name": "António"
+        },
+        {
+          "name": "Catarina"
+        },
+        {
+          "name": "Sigma_male_1"
+        }
+      ],
       "img_path": "logo.png"
     },
     {
       "id": 1,
       "type": "Competition",
       "title": "testingEvent1",
+      "creator": "António",
       "isPublic": false,
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2021-12-01",
+      "endDate": "2021-12-03",
       "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
       "invities": "",
@@ -193,9 +205,10 @@
       "id": 2,
       "type": "Meeting",
       "title": "testingEvent2",
+      "creator": "Isabel",
       "isPublic": true,
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2021-12-03",
+      "endDate": "2021-12-03",
       "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
       "invities": "",
@@ -205,9 +218,10 @@
       "id": 3,
       "type": "Meeting",
       "title": "testingEvent3",
-      "isPublic": false,
-      "startDate": "",
-      "endDate": "",
+      "creator": "Diogo",
+      "isPublic": true,
+      "startDate": "2021-12-01",
+      "endDate": "2021-12-05",
       "rules": "",
       "description": "Lorem ipsum dolor sit ameth",
       "invities": "",
@@ -384,6 +398,53 @@
       ],
       "period": 0,
       "exercises": []
+    },
+    {
+      "id": 6,
+      "name": "I love back",
+      "type": "back",
+      "frequency": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "period": 364,
+      "exercises": [
+        {
+          "id": 0,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },
+        {
+          "id": 1,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },
+        {
+          "id": 2,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },
+        {
+          "id": 8,
+          "no_reps_instr": "100 reps",
+          "no_series": 100
+        },
+        {
+          "id": 4,
+          "no_reps_instr": "4 reps",
+          "no_series": 4
+        },
+        {
+          "id": 3,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        }
+      ]
     }
   ],
   "exercise_tags_list": [

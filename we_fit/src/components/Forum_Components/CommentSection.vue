@@ -1,8 +1,10 @@
 <template>
-  <hr class="divider">
-  <h3 style="text-align: left; ">Comment Section</h3>
-  <div :key = "comment.id" v-for="comment in this.comments" >
-      <ForumCommentCard :post_id="this.id" :comment_id="comment.id"/>
+  <div>
+    <hr class="divider">
+    <h3 style="text-align: left; ">Comment Section</h3>
+    <div :key = "comment.id" v-for="comment in this.comments" >
+        <ForumCommentCard :post_id="this.id" :comment_id="comment.id"/>
+    </div>
   </div>
 </template>
 <script>

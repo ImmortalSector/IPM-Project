@@ -68,21 +68,35 @@ export default {
       }
     },
 
-    onChangeStart() {
+    async onChangeStart() {
+      
       if(this.endDate === null) {
         this.endDate = this.startDate
       } else {
+        this.event_cards_list = await this.fetchEventsPostCardsList()
         if(this.startDate > this.endDate)
         this.endDate = this.startDate
       }
+      if(this.startDate === this.endDate) {
+        this.event_cards_list = this.event_cards_list.filter((event) => 
+        (event.startDate === this.startDate) && (event.endDate === this.endDate))
+      }
     },
 
-    onChangeEnd() {
+    async onChangeEnd() {
+      
       if(this.startDate === null) {
         this.startDate = this.endDate
       } else {
+        this.event_cards_list = await this.fetchEventsPostCardsList()
         if(this.endDate < this.startDate)
         this.startDate = this.endDate
+      }
+      this.event_cards_list = this.event_cards_list.filter((event) => 
+        (event.startDate >= this.startDate) && (event.endDate <= this.endDate))
+      if(this.startDate === this.endDate) {
+        this.event_cards_list = this.event_cards_list.filter((event) => 
+        (event.startDate === this.startDate) && (event.endDate === this.endDate))
       }
     },
 

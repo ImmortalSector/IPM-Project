@@ -13,20 +13,29 @@
         <!--img class="image_thumbnail" :src="'~'+imgPath + post_card.img_path"  :alt="imgPath + post_card.img_path"/-->
         </router-link>
       </div>
-      <div class="col-auto justify-content-center">
+      <div class="col-8 justify-content-center">
         <router-link class="rl" :to="{name: 'EventPost', params: {id: post_card.id}}" >
-        <div class="container">
-          <div class="row align-items-start" style="font-size: xx-large">
+          <div class="container">
+            <div class="row align-items-start" style="font-size: xx-large">
               {{ post_card.title }}
-          </div>
+            </div>
             <div class="row align-items-end">
-            {{post_card.description}}
+              {{post_card.description}}
+            </div>
+            <div class="type d-flex-inline justify-content-end align-items-end">
+              <div v-if="post_card.type === 'Challenge'">
+                <font-awesome-icon class="type-element" icon="running" style="height: 3vh; width: 3vw; align-self: end"/>
+              </div>
+              <div v-else-if="post_card.type === 'Competition'">
+                <font-awesome-icon class="type-element" icon="star" style="height: 3vh; width: 3vw; align-self: end"/>
+              </div>
+              <div v-else>
+                <font-awesome-icon class="type-element" icon="users" style="height: 3vh; width: 3vw; align-self: end"/>
+              </div>
           </div>
-        </div>
+          </div>
         </router-link>
-
       </div>
-
     </div>
   </div>
 </template>
