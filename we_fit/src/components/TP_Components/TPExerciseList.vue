@@ -47,8 +47,6 @@ export default {
   },
   async created() {
     this.all_exercises = await this.get_exercise_list();
-    console.log('all ex', this.all_exercises);
-
   }
 }
 </script>

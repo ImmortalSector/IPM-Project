@@ -2,7 +2,7 @@
   <div class="container w-100 align-content-start align-items-start">
     <div class="row d-inline-flex flex-row justify-content-start text-to-left w-100">
       <p class="col-auto">
-        <span class="name float-start text-to-left ms-auto">{{this.name}}</span><span class="type float-start ms-auto">#{{this.type}}</span>
+        <span class="name float-start text-to-left ms-auto" style="margin-top: 0.25em;">{{this.name}}</span><span class="type float-start ms-auto">#{{this.type}}</span>
       </p>
       <div class="col-auto"></div>
     </div>
