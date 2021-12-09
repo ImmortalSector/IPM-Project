@@ -71,9 +71,14 @@
           <p class="form-label left-align-absolute" style="font-size: x-large">Description</p>
           {{ post.description }}
         </div>
-
+        <br><br>
       </div>
     </div>
+    <br><br>
+    <div class="align-items-center">
+      <button class="submit-btn btn btn-dark" @click="join">Join event</button>
+    </div>
+
   </div>
 </template>
 
@@ -92,6 +97,10 @@ export default{
     };
   },
   methods : {
+
+    async join() {
+
+    }
       
   },
   async created() {
