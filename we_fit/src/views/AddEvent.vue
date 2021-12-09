@@ -16,8 +16,8 @@
         </div>
         <br><br>
         <div class="d-inline-flex left-align-absolute flex-row">
-          <label class="form-label force-text-centered" for="myEvents" style="margin-right:1.2rem; font-size: large">My Events</label>
-          <input type="checkbox" id="myEvents" value="My Events" v-model="this.make_public" class="align-self-center">
+          <label class="form-label force-text-centered" for="makePublic" style="margin-right:1.2rem; font-size: large">Make public</label>
+          <input type="checkbox" id="makePublic" value="Make Public" v-model="this.make_public" class="align-self-center">
         </div>
         <br><br>
         <div class="d-inline-flex left-align-absolute flex-row">
