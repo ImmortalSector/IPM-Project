@@ -1,5 +1,5 @@
 <template>
-  <div class="d-inline-flex align-content-end flex-row control-bar ">
+  <div class="d-inline-flex align-content-end flex-row control-bar">
     <TPExerciseTags @tag="tagEventHandler" class="ex-selector" />
     <TPSearchBar @search.prevent="searchEventHandler" class="ex-search" />
   </div>

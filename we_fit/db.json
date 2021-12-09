@@ -120,6 +120,30 @@
     },
     {
       "id": 3,
+      "title": "Plank Posture",
+      "votes": 50,
+      "description": "After planking I get back pain. What can I do to fix this?",
+      "img_path": "logo.png",
+      "my_vote": 0,
+      "comments": [
+        {
+          "id": 0,
+          "author": "Sigma_male_1",
+          "text": "Contract those glutes for stability",
+          "my_vote": 0,
+          "votes": 2000
+        },
+        {
+          "id": 1,
+          "author": "Ellen_Degenerate",
+          "text": "Focus more on your contraction of glutes, core and back. If it still hurts try to start on a declined plank",
+          "my_vote": 0,
+          "votes": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
       "title": "dgf",
       "votes": 1,
       "description": "fds",
@@ -128,37 +152,10 @@
       "comments": []
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "sa",
       "votes": 1,
       "description": "sa",
-      "img_path": "logo.png",
-      "my_vote": 1,
-      "comments": []
-    },
-    {
-      "id": 5,
-      "title": "dsfdfs",
-      "votes": 1,
-      "description": "dfsfd",
-      "img_path": "logo.png",
-      "my_vote": 1,
-      "comments": []
-    },
-    {
-      "id": 6,
-      "title": "saddsa",
-      "votes": 1,
-      "description": "asdd",
-      "img_path": "logo.png",
-      "my_vote": 1,
-      "comments": []
-    },
-    {
-      "id": 7,
-      "title": "sadsad",
-      "votes": 1,
-      "description": "sadsd",
       "img_path": "logo.png",
       "my_vote": 1,
       "comments": []
@@ -176,11 +173,19 @@
       "rules": "You have to run nonstop!",
       "description": "Lorem ipsum dolor sit ameth",
       "invities": [
-        {"name": "Ana"},
-        {"name": "António"},
-        {"name": "Catarina"},
-        {"name": "Sigma_male_1"}
-      ],    
+        {
+          "name": "Ana"
+        },
+        {
+          "name": "António"
+        },
+        {
+          "name": "Catarina"
+        },
+        {
+          "name": "Sigma_male_1"
+        }
+      ],
       "img_path": "logo.png"
     },
     {

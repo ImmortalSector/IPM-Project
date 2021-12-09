@@ -29,7 +29,7 @@
               <div v-else-if="post_card.type === 'Competition'">
                 <font-awesome-icon class="type-element" icon="star" style="height: 3vh; width: 3vw; align-self: end"/>
               </div>
-              <div v-else class="justify-content-end">
+              <div v-else>
                 <font-awesome-icon class="type-element" icon="users" style="height: 3vh; width: 3vw; align-self: end"/>
               </div>
           </div>

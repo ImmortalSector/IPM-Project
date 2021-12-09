@@ -60,8 +60,8 @@ export default {
   margin: 5%;
   height: 2vh;
   width: 2vw;
-
 }
+
 .float-left{
   float: left;
 }

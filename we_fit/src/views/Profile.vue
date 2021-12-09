@@ -165,7 +165,7 @@ export default {
 .fluid-intake{
   object-fit: scale-down;
 
-  align-self: start!important;
+  align-self: start !important;
 }
 .profile-info{
   margin-top: 1vh;
@@ -180,6 +180,5 @@ export default {
 .color-red{
   color: #5F0B19;
 }
-.very-tiny{
-}
+
 </style>
