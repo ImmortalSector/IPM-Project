@@ -4,15 +4,10 @@
   <EventsSearchBar @events_search_event="filterList"/>
   <br>
   <br>
-  <!-- <div class="d-inline-flex left-align-absolute flex-row"> -->
   <div class="container">
     <div class="row">
         <div class="col-sm">
-          <!-- <EventType @type="typeEventHandler" class="event-selector" /> change to this-->
-          <label class="form-label" for="typeInput" style="margin-right:1.2rem; font-size: 16px">Type</label>
-          <select id="typeInput" v-model="this.type"  class="form-select" aria-label="Default select example">
-            <option :value="event_type.name" :key="event_type.name" v-for="(event_type) in this.event_types">{{event_type.name}}</option>
-          </select>
+          <EventType @type="typeEventHandler" class="event-selector" />
         </div>
         <div class="col-sm">
           <label class="form-label" for="startDate" style="margin-right:1.2rem; font-size: 16px">Start Date </label>
@@ -39,14 +34,14 @@
 import EventsPostCardsList from "../components/Event_Components/EventPostCardsList.vue";
 import EventsSearchBar from "../components/Event_Components/EventsSearchBar.vue";
 import AddEventPlusButton from "../components/Event_Components/AddEventPlusButton.vue";
-//import EventType from "../components/Event_Components/EventType.vue";
+import EventType from "../components/Event_Components/EventType.vue";
 export default {
   name: "Events_Feed",
   components: {
     AddEventPlusButton,
     EventsPostCardsList,
     EventsSearchBar,
-    //EventType
+    EventType
   },
   data() {
     return {
@@ -67,7 +62,7 @@ export default {
     async typeEventHandler(e, type){
       e.preventDefault();
       this.event_cards_list = await this.fetchEventsPostCardsList()
-      if( type !== 'all'){
+      if( type !== 'All'){
         this.event_cards_list = this.event_cards_list.filter((event) => 
           event.type.includes(type))
       }
