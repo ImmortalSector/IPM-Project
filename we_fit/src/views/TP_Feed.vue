@@ -8,8 +8,9 @@
         <TPFeedCard :tp="tp"/>
       </div>
   </div>
-</div>
+
   <AddTPPlusButton style="position: fixed; bottom: 0px; right: 0px; height: 5rem; width: 5rem"/>
+</div>
 </template>
 <script>
 import TPFeedCard from "../components/TP_Components/TPFeedCard";
