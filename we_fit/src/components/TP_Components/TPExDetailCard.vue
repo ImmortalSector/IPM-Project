@@ -19,7 +19,8 @@ export default {
   components: {
   },
   props : {
-
+    exercise_prop: {},
+    exercise_details_prop: {},
     ex_id: Number,
     post_id: Number,
   },
@@ -58,14 +59,18 @@ export default {
     const exs_details = await this.get_exercise_list();
     const exs = (await this.getTP()).exercises;
     console.log('prep: ex id', this.ex_id, ' from ', this.post_id);
-
-    for(let i = 0; i<exs.length; i++){
-      if(exs[i].id === this.ex_id){
-        this.exercise = exs[i];
-
-        this.exercise_details = this.getCorrespondingExerciseInfo(exs[i].id, exs_details);
-        console.log(this.exercise, this.exercise_details);
-        return
+    console.log('initial state: ', ' ex ', this.exercise, 'ex_detail', this.exercise_details)
+    if(this.exercise_details_prop === null || this.exercise_prop === null){
+      this.exercise_details = this.exercise_details_prop;
+      this.exercise = this.exercise_prop;
+    }else{
+      for(let i = 0; i<exs.length; i++){
+        if(exs[i].id === this.ex_id){
+          this.exercise = exs[i];
+          this.exercise_details = this.getCorrespondingExerciseInfo(exs[i].id, exs_details);
+          console.log(this.exercise, this.exercise_details);
+          return
+        }
       }
     }
     console.log('failed to load exercise', exs, exs_details);
