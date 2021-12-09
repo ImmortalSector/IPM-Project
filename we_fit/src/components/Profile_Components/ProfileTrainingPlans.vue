@@ -7,8 +7,8 @@
       <p class="col-3">
         No. Ex: {{tp.exercises.length}}
       </p>
-      <router-link :to="`/TP/${tp.id}`" class="col-2">
-        <font-awesome-icon icon="external-link-alt" style="color: #FFFFFF"/>
+      <router-link :to="`/TP/${tp.id}`" class="col-2 hover-red">
+        <font-awesome-icon icon="external-link-alt" style="color: inherit" />
       </router-link>
     </div>
   </div>
@@ -44,5 +44,10 @@ export default {
 }
 </script>
 <style scoped>
-
+.hover-red{
+  color: #FFFFFF;
+}
+.hover-red:hover{
+  color: #980000;
+}
 </style>

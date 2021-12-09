@@ -62,8 +62,8 @@
           </router-link>
         </div>
         <div class="row d-flex justify-content-end mr-0">
-          <div class="col-8 d-flex flex-wrap w-100 ml-0">
-            <ProfileAchievementHolder  :achievments_ongoing = "this.achievements"/>
+          <div class="col-8 d-flex flex-wrap w-100 ml-0  p-2 border border-dark overflow-auto rounded" style="max-height: 440px!important;">
+            <event-post-cards-list  :event_cards_list = "this.achievements" />
           </div>
         </div>
       </div>
@@ -101,13 +101,13 @@
 
 <script>
 import ProfileAchievementCard from "../components/Profile_Components/ProfileAchievmentCard";
-import ProfileAchievementHolder from "../components/Profile_Components/ProfileAchievmentsHolder";
 import ProfileTrainingPlan from "../components/Profile_Components/ProfileTrainingPlans";
+import EventPostCardsList from "../components/Event_Components/EventPostCardsList";
 export default {
   name: "Profile",
   components: {
+    EventPostCardsList,
     ProfileTrainingPlan,
-    ProfileAchievementHolder,
     ProfileAchievementCard
   },
   data(){
