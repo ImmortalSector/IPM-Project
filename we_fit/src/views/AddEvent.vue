@@ -5,7 +5,7 @@
       <div class="form-group col-6">
         <div class="d-inline-flex left-align-absolute flex-row">
           <label class="form-label " for="nameInput" style="margin-right:1.2rem; font-size: x-large">Name</label>
-          <input v-model="this.event_name" type="text" class="form-control" id="nameInput" placeholder="Event Name" >
+          <input v-model="this.name" type="text" class="form-control" id="nameInput" placeholder="Event Name" >
         </div>
         <br><br>
         <div class="d-inline-flex left-align-absolute flex-row">
@@ -68,7 +68,7 @@ export default{
   },
   data(){
     return {
-      event_name: '',
+      name: '',
       event_types: [{name: 'Challenge'}, {name: 'Competition'}, {name: 'Meeting'}],
       type: '',
       make_public: false,
@@ -98,6 +98,53 @@ export default{
         this.startDate = this.endDate
       }
     },
+
+    async AddEvent() {
+      let emptyfields = '';
+      if(this.name === '') emptyfields += ' name';
+      if(this.type === '') emptyfields += ' type';
+      if(this.startDate === '') emptyfields += ' startDate';
+      if(this.endDate === '') emptyfields += ' endDate';
+      if( emptyfields !== ''){
+
+        alert('The following fields are mandatory:' + emptyfields);
+        return
+      }
+
+      const id = await this.calcIndex();
+      console.log(id)
+      const new_event = {
+          id: id,
+          title: this.name,
+          type: this.type,
+          isPublic: this.make_public,
+          startDate: this.startDate,
+          endDate: this.endDate,
+          rules: this.ruleSet,
+          description: this.description,
+          invites: this.invites
+      }
+      console.log(new_event);
+      const res = await fetch('api/event_cards_list', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(new_event),
+      });
+      if(!(await res).statusCode === 201){
+        alert('Something went wrong on our side. Please retry submitting the Event. If this continues please contact our team.\n Sorry for the inconvenience.')
+        return
+      }else{
+        await this.$router.push({path: `/event_cards_list/${id}`});
+      }
+    },
+
+    async calcIndex(){
+      const res = await fetch('api/event_cards_list')
+      const data = await res.json()
+      return data.length
+    }
   },
 }
 </script>
