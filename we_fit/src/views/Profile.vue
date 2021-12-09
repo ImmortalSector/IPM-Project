@@ -41,7 +41,7 @@
 
     <div class="row d-flex-inline justify-content-between mt-5 w-100">
 
-      <div class="col-auto d-flex flex-wrap">
+      <div class="col-5 d-flex flex-wrap">
         <div class="container">
           <h3 class="align-self-start row">Calorie Consumption</h3>
           <div class="row">
@@ -49,7 +49,7 @@
             <button @click="alert_not_working" class="btn btn-outline-dark align-self-start mb-4 ml-3 mr-3 col-5" style="height: 30px; font-size: smaller">Add Today</button>
           </div>
           <div class="col-1" style="object-fit: contain">
-            <img style="object-fit: contain; width: 30vw" alt="WeFit" src="../assets/profile_cal_bars.png" @click="alert_not_working">
+            <img style="object-fit: contain; width: 23vw!important;" alt="WeFit" src="../assets/profile_cal_bars.png" @click="alert_not_working">
           </div>
         </div>
       </div>
@@ -57,14 +57,13 @@
       <div class="container col-6">
         <div class="row d-inline-flex justify-content-between w-75 flex-nowrap" >
           <h3 class="align-self-start" style="text-align: start; margin-top: 0.15em">Achievements: </h3>
-          <router-link to="/addTP" class="col">
-            <button class="col-auto btn btn-outline-dark" @click="alert_not_working" style="width: 2.5em; height: 2.5em"><font-awesome-icon icon="plus" style="object-fit: contain"/></button>
+          <router-link to="/addEvent" class="col">
+            <button class="col-auto btn btn-outline-dark" style="width: 2.5em; height: 2.5em"><font-awesome-icon icon="plus" style="object-fit: contain"/></button>
           </router-link>
         </div>
-        <div class="row d-flex justify-content-between">
-
-          <div class="col-8 d-flex flex-wrap">
-            <ProfileAchievementHolder class="w-75" style="border: 1px solid #333333; align-self: start; margin-left: 15vh"/>
+        <div class="row d-flex justify-content-end mr-0">
+          <div class="col-8 d-flex flex-wrap w-100 ml-0">
+            <ProfileAchievementHolder  :achievments_ongoing = "this.achievements"/>
           </div>
         </div>
       </div>
@@ -74,8 +73,7 @@
 
 
     <div class="row d-flex justify-content-between col-3 mt-5 w-100 pb-5">
-
-      <div class="col-4 container d-flex" style="align-self: start; margin-left: 0; flex-wrap: wrap">
+      <div class="col-5 container d-flex" style="align-self: start; margin-left: 0; flex-wrap: wrap">
         <div class="row d-inline-flex justify-content-between align-self-start flex-nowrap">
           <h3 class="col-auto" style="margin-top: 0.20em;">Fluid Intake</h3>
           <button class="col-auto btn btn-outline-dark" @click="alert_not_working" style="width: 2.5em; height: 2.5em"><font-awesome-icon icon="plus" style="object-fit: contain"/></button>
@@ -89,7 +87,7 @@
         <div class="row d-inline-flex justify-content-between w-75 flex-nowrap" >
           <h3 class="align-self-start" style="text-align: start; margin-top: 0.15em">Training Plans: </h3>
           <router-link to="/addTP" class="col">
-            <button class="col-auto btn btn-outline-dark" @click="alert_not_working" style="width: 2.5em; height: 2.5em"><font-awesome-icon icon="plus" style="object-fit: contain"/></button>
+            <button class="col-auto btn btn-outline-dark" style="width: 2.5em; height: 2.5em"><font-awesome-icon icon="plus" style="object-fit: contain"/></button>
           </router-link>
         </div>
         <div class="row d-flex justify-content-end ml-0">

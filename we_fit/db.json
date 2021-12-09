@@ -384,6 +384,53 @@
       ],
       "period": 0,
       "exercises": []
+    },
+    {
+      "id": 6,
+      "name": "I love back",
+      "type": "back",
+      "frequency": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "period": 364,
+      "exercises": [
+        {
+          "id": 0,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },
+        {
+          "id": 1,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },
+        {
+          "id": 2,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        },
+        {
+          "id": 8,
+          "no_reps_instr": "100 reps",
+          "no_series": 100
+        },
+        {
+          "id": 4,
+          "no_reps_instr": "4 reps",
+          "no_series": 4
+        },
+        {
+          "id": 3,
+          "no_reps_instr": "2 reps",
+          "no_series": 2
+        }
+      ]
     }
   ],
   "exercise_tags_list": [
