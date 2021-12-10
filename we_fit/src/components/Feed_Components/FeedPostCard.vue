@@ -1,7 +1,7 @@
 <template>
   <div class="container pt-3" style="">
       <div class="row align-items-start title-row d-inline" style="font-size: xx-large; text-align: start; flex-wrap: nowrap">
-        <span style="color:#980000">{{ post_card.user}}:</span> <span>{{ post_card.title }}</span>
+        <span style="color:#980000">{{ post_card.user}}:</span>{{ post_card.title }}
       </div>
       <img class="image_post img-row align-items-center" alt="Image Post" :src="post_card.img_path" >
         <!-- <img class="image_thumbnail img-row align-items-center" alt="WeFit logo" src="../../assets/logo.png"> -->

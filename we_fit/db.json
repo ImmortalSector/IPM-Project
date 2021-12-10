@@ -34,37 +34,23 @@
   "post_cards_list": [
     {
       "id": 0,
-      "title": "testing0",
+      "title": "Proper plank posture",
       "votes": -2,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
+      "description": "After planking, I feel a bit of pain on my shoulders and back. Can anyone explain to me what could be causing that?",
+      "img_path": "https://i.imgur.com/q0GXJKu.jpeg",
       "my_vote": -1,
       "comments": [
         {
-          "author": "me",
-          "id": 3,
-          "text": "das",
-          "my_vote": 1,
-          "votes": 1
-        },
-        {
-          "author": "me",
-          "id": 2,
-          "text": ".lhkhl.k",
-          "my_vote": 1,
-          "votes": 1
-        },
-        {
           "id": 0,
-          "author": "jake",
-          "text": "Lorem ipsum dolor sit ameth",
+          "author": "Sigma_Male",
+          "text": "Be sure you contract those glutes for stability!",
           "my_vote": 0,
           "votes": -1
         },
         {
           "id": 1,
-          "author": "Anna",
-          "text": "Lorem ipsum dolor sit ameth",
+          "author": "Ellen_Degenerate",
+          "text": "Focus on the contraction of your glutes, core and back. If it still hurts, try to stand on a declined surface.",
           "my_vote": 0,
           "votes": -1
         }
@@ -72,23 +58,23 @@
     },
     {
       "id": 1,
-      "title": "testing1",
+      "title": "Why I feel like I am not getting any gains from my training plan?",
       "votes": 8,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
+      "description": "I created a training plan with the objective to become stronger when it comes to my arms. However, after 2 weeks of training, I don't feel any improvements. Any suggestions?",
+      "img_path": "https://i.imgur.com/q1tAIPL.jpg",
       "my_vote": 1,
       "comments": [
         {
           "id": 0,
-          "author": "jake",
-          "text": "Lorem ipsum dolor sit ameth",
+          "author": "Jake",
+          "text": "You should be aware that improvements tend to take time to appear. I am sure you will start noticing them after 1/2 months :D.",
           "my_vote": 0,
           "votes": -1
         },
         {
           "id": 1,
           "author": "Anna",
-          "text": "Lorem ipsum dolor sit ameth",
+          "text": "Can you share your training plan?",
           "my_vote": 0,
           "votes": -1
         }
@@ -96,82 +82,52 @@
     },
     {
       "id": 2,
-      "title": "testing2",
+      "title": "How to train for a marathon?",
       "votes": 3,
-      "description": "Lorem ipsum dolor sit ameth",
-      "img_path": "logo.png",
+      "description": "I am going to participate in my first marathon, but I don't know how to prepare myself for it. Can someone give me some advices?",
+      "img_path": "https://i.imgur.com/Ji5S7qj.png",
       "my_vote": 0,
-      "comments": [
-        {
-          "id": 0,
-          "author": "jake",
-          "text": "Lorem ipsum dolor sit ameth",
-          "my_vote": 0,
-          "votes": -1
-        },
-        {
-          "id": 1,
-          "author": "Anna",
-          "text": "Lorem ipsum dolor sit ameth",
-          "my_vote": 0,
-          "votes": -1
-        }
-      ]
+      "comments": []
     },
     {
       "id": 3,
-      "title": "Plank Posture",
+      "title": "Am I doing the right diet?",
       "votes": 50,
-      "description": "After planking I get back pain. What can I do to fix this?",
-      "img_path": "logo.png",
+      "description": "I am trying to lose some weight, but I am not sure if I am eating what I should...",
+      "img_path": "https://i.imgur.com/EEqBUam.jpg",
       "my_vote": 0,
-      "comments": [
-        {
-          "id": 0,
-          "author": "Sigma_male_1",
-          "text": "Contract those glutes for stability",
-          "my_vote": 0,
-          "votes": 2000
-        },
-        {
-          "id": 1,
-          "author": "Ellen_Degenerate",
-          "text": "Focus more on your contraction of glutes, core and back. If it still hurts try to start on a declined plank",
-          "my_vote": 0,
-          "votes": 4
-        }
-      ]
+      "comments": []
     },
     {
       "id": 4,
-      "title": "dgf",
+      "title": "When should I return lifting weights after an operation?",
       "votes": 1,
-      "description": "fds",
-      "img_path": "logo.png",
+      "description": "I had a back operation 2 months ago and I have been recovering well. However, when I lift something heavy, I still fell a bit of pain.",
+      "img_path": "https://i.imgur.com/Ji5S7qj.png",
       "my_vote": 1,
-      "comments": []
-    },
-    {
-      "id": 5,
-      "title": "sa",
-      "votes": 1,
-      "description": "sa",
-      "img_path": "logo.png",
-      "my_vote": 1,
-      "comments": []
+      "comments": [
+        {
+          "id": 0,
+          "author": "Anna",
+          "text": "You should talk to your doctor about it in order to understand how long you should wait until you are good to train again.",
+          "my_vote": 0,
+          "votes": 1
+        }
+      ]
     }
   ],
   "event_cards_list": [
     {
       "id": 0,
       "type": "Challenge",
-      "title": "testingEvent0",
+      "title": "One punch man challenge!!!",
       "creator": "Ana",
       "isPublic": false,
       "startDate": "2021-11-30",
-      "endDate": "2021-12-03",
-      "rules": "You have to run nonstop!",
-      "description": "Lorem ipsum dolor sit ameth",
+      "endDate": "2021-12-30",
+      "rules": "Everyday you should do 100 situps, pushups, squats and a 10km run.",
+      "description": "During one month, you should train everyday like Saitama from 'One Punch Man'!",
+      "img_path": "https://i.imgur.com/NkEnZZ5.jpg",
       "invities": [
         {
           "name": "Ana"
@@ -185,47 +141,46 @@
         {
           "name": "Sigma_male_1"
         }
-      ],
-      "img_path": "logo.png"
+      ]
     },
     {
       "id": 1,
       "type": "Competition",
-      "title": "testingEvent1",
+      "title": "Running in the 90's",
       "creator": "António",
       "isPublic": false,
-      "startDate": "2021-12-01",
+      "startDate": "2021-12-21",
       "endDate": "2021-12-03",
       "rules": "",
-      "description": "Lorem ipsum dolor sit ameth",
+      "description": "Running is life, running is love. Whowever beats my gramps wins!",
       "invities": "",
-      "img_path": "logo.png"
+      "img_path": "https://i.imgur.com/4ThGlbI.jpg"
     },
     {
       "id": 2,
       "type": "Meeting",
-      "title": "testingEvent2",
+      "title": "Squad up and Run!",
       "creator": "Isabel",
       "isPublic": true,
       "startDate": "2021-12-03",
       "endDate": "2021-12-03",
       "rules": "",
-      "description": "Lorem ipsum dolor sit ameth",
+      "description": "Join us in our weekly runs starting December 3rd!",
       "invities": "",
-      "img_path": "logo.png"
+      "img_path": "https://i.imgur.com/Ji5S7qj.png"
     },
     {
       "id": 3,
       "type": "Meeting",
-      "title": "testingEvent3",
+      "title": "Community Gym",
       "creator": "Diogo",
       "isPublic": true,
       "startDate": "2021-12-01",
       "endDate": "2021-12-05",
       "rules": "",
-      "description": "Lorem ipsum dolor sit ameth",
+      "description": "We bring dumbells, we bring bars. You bring the mask!",
       "invities": "",
-      "img_path": "logo.png"
+      "img_path": "https://i.imgur.com/Ji5S7qj.png"
     }
   ],
   "training_plans": [
