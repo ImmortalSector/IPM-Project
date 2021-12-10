@@ -99,7 +99,8 @@ export default{
   methods : {
 
     async join() {
-
+      //let len = this.invities.length
+      //this.invities[len++] = "me"
     }
       
   },
@@ -148,7 +149,7 @@ export default{
 .post-title{
   text-align: left;
   object-position: left;
-  color: #5F0B19;
+  color: #ab112b;
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 0;

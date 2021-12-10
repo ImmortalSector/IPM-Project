@@ -10,7 +10,7 @@
       {{this.ex_card.name}}
     </div>
     <div class="d-inline">
-      <p v-for="tag in this.ex_card.tags" :key="tag" class="d-inline tag-style"><span style="color:#5F0B19">#</span>{{tag}}</p>
+      <p v-for="tag in this.ex_card.tags" :key="tag" class="d-inline tag-style"><span style="color:#ab112b">#</span>{{tag}}</p>
     </div>
 
   </div>

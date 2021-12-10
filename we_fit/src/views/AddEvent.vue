@@ -184,7 +184,7 @@ export default{
   display: none;
 }
 .day-check:checked{
-  background-color: #5F0B19;
+  background-color: #ab112b;
   color: #FFFFFF;
 }
 .day-label{
@@ -194,7 +194,7 @@ export default{
 .day-label-selected{
   padding: 1vh 1vw 1vh 1vw;
   border: #333333 solid 2px;
-  background-color: #5F0B19;
+  background-color: #ab112b;
   color: #FFFFFF;
 }
 input[type='checkbox'] {

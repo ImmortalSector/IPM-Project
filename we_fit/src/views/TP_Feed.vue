@@ -49,7 +49,7 @@ export default {
 </script>
 <style scoped>
 #owner{
-  color: #5F0B19;
+  color: #ab112b;
   font-size: xxx-large;
 }
 .align-text-left{

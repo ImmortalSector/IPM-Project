@@ -83,7 +83,7 @@ export default {
 .vote-button-selected{
   background: none;
   border: none;
-  color: #5F0B19 !important;
+  color: #ab112b !important;
 }
 .float-right{
   float: right;
@@ -93,7 +93,7 @@ export default {
 }
 .rl:hover{
   text-decoration: none;
-  color: #5F0B19 ;
+  color: #ab112b ;
 }
 
 </style>

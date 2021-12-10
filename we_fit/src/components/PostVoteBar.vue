@@ -70,7 +70,7 @@ export default {
 .vote-button-selected{
   background: none;
   border: none;
-  color: #5F0B19 !important;
+  color: #ab112b !important;
 }
 .form-inline {
   width: 100%!important;

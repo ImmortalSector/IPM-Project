@@ -119,7 +119,7 @@ export default {
  }
 
 .red-text{
-  color: #5F0B19;
+  color: #ab112b;
 }
 
 .info{
@@ -128,7 +128,7 @@ export default {
 }
 .type{
   font-size: xx-large;
-  color: #5F0B19;
+  color: #ab112b;
 }
 .expanding-button{
   height: 4vh;
@@ -146,7 +146,7 @@ export default {
 }
 
 .bg-special-red{
-  background-color: #5F0B19;
+  background-color: #ab112b;
 }
 
 .exercise-row{

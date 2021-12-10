@@ -27,10 +27,10 @@
       <div class="col-auto justify-content-center">
         <router-link class="rl" :to="{name: 'ForumPost', params: {id: post_card.id}}" >
         <div class="container">
-          <div class="row align-items-start" style="font-size: xx-large">
+          <div class="row align-items-start" style="font-size: xx-large; overflow: hidden">
               {{ post_card.title }}
           </div>
-            <div class="row align-items-end">
+            <div class="row align-items-end" style="overflow: hidden">
             {{post_card.description}}
           </div>
         </div>
@@ -85,7 +85,7 @@ export default {
 .vote-button-selected{
   background: none;
   border: none;
-  color: #5F0B19 !important;
+  color: #ab112b !important;
 }
 .float-right{
   float: right;
@@ -95,7 +95,7 @@ export default {
 }
 .rl:hover{
   text-decoration: none;
-  color: #5F0B19 ;
+  color: #ab112b ;
 }
 
 </style>

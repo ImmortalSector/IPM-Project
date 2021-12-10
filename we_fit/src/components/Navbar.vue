@@ -58,7 +58,8 @@ export default {
   text-decoration: none; color: inherit;
 }
 .rl:hover{
-  color: #5F0B19 ;
+  /*color: #5F0B19 ;*/
+  color: #ab112b ;
 }
 
 </style>
