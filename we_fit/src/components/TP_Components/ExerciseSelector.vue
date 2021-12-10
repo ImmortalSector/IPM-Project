@@ -46,7 +46,7 @@ export default {
 
     async searchEventHandler(e, search){
       e.preventDefault();
-      alert(search);
+      this.current_exercises = this.all_exercises
       console.log('search hit');
       this.currentSearch = search;
       this.current_exercises = this.current_exercises.filter((ex) => ex.name.includes(search));
