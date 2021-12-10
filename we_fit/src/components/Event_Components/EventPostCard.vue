@@ -9,7 +9,8 @@
       </div>
       <div class="col-3 justify-content-center" style="max-height: 100%">
         <router-link class="rl" :to="{name: 'EventPost', params: {id: post_card.id}}" >
-        <img class="image_thumbnail " alt="WeFit logo" src="../../assets/logo.png">
+        <!-- <img class="image_thumbnail " alt="WeFit logo" src="../../assets/logo.png"> -->
+          <img class="image_thumbnail " alt="WeFit logo" :src="post_card.img_path">
         <!--img class="image_thumbnail" :src="'~'+imgPath + post_card.img_path"  :alt="imgPath + post_card.img_path"/-->
         </router-link>
       </div>
