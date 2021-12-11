@@ -26,11 +26,11 @@
       </div>
       <div class="col-auto justify-content-center">
         <router-link class="rl" :to="{name: 'ForumPost', params: {id: post_card.id}}" >
-        <div class="container">
-          <div class="row align-items-start" style="font-size: xx-large; overflow: hidden">
+        <div class="container" style="width: 19cm;">
+          <div class="row align-items-start" style="font-size: xx-large; word-break: break-all; text-align:left">
               {{ post_card.title }}
           </div>
-            <div class="row align-items-end" style="overflow: hidden">
+            <div class="row align-items-end" style="word-break: break-all; text-align:left">
             {{post_card.description}}
           </div>
         </div>
