@@ -57,12 +57,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .image_thumbnail {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   border: 3px solid #333333;
-  object-fit: contain!important;
+  object-fit: cover!important;
 }
 
 .voting-element{
