@@ -3,7 +3,7 @@ This project corresponds to a web application that was built with the help of an
 
 ## In order to run the application, the user most follow the following steps:
 
-0. If you don't have it, get node.js installed first. You can get it on the following site: https://nodejs.org/en/download/
+0. If you don't have it, install node.js. You can get it on the following site: https://nodejs.org/en/download/
 
       > Make shure you have node availlable globally by running the command:
       > 
