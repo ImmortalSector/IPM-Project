@@ -5,7 +5,7 @@
         <input type="text" v-model="search" name="search" placeholder="Search exercise" style="border: 0" />
       </div>
       <div class="div d-inline-flex ">
-        <button type="submit" value="" class="btn btn-block align-self-center" style="color: #FFFFFF; background-color: #5F0B19">
+        <button type="submit" value="" class="btn btn-block align-self-center" style="color: #FFFFFF; background-color: #ab112b">
           <font-awesome-icon icon="search"/>
         </button>
       </div>

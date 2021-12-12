@@ -82,7 +82,7 @@ export default {
 .author-style{
   text-align: left;
   object-position: left;
-  color: #5F0B19;
+  color: #ab112b;
   font-size: 1rem;
   font-weight: bold;
   padding-bottom: 0;

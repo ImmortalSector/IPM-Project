@@ -26,11 +26,11 @@
       </div>
       <div class="col-auto justify-content-center">
         <router-link class="rl" :to="{name: 'ForumPost', params: {id: post_card.id}}" >
-        <div class="container">
-          <div class="row align-items-start" style="font-size: xx-large">
+        <div class="container" style="width: 19cm;">
+          <div class="row align-items-start" style="font-size: xx-large; word-break: break-all; text-align:left">
               {{ post_card.title }}
           </div>
-            <div class="row align-items-end">
+            <div class="row align-items-end" style="word-break: break-all; text-align:left">
             {{post_card.description}}
           </div>
         </div>
@@ -57,12 +57,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .image_thumbnail {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   border: 3px solid #333333;
-  object-fit: contain!important;
+  object-fit: cover!important;
 }
 
 .voting-element{
@@ -85,7 +85,7 @@ export default {
 .vote-button-selected{
   background: none;
   border: none;
-  color: #5F0B19 !important;
+  color: #ab112b !important;
 }
 .float-right{
   float: right;
@@ -95,7 +95,7 @@ export default {
 }
 .rl:hover{
   text-decoration: none;
-  color: #5F0B19 ;
+  color: #ab112b ;
 }
 
 </style>

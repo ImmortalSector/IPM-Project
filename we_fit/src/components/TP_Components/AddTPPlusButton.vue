@@ -18,7 +18,7 @@ export default{
 <style scoped>
 .big-red-button{
   color: white;
-  background: #5F0B19;
+  background: #ab112b;
   border-radius: 100%;
   object-fit: contain;
 }

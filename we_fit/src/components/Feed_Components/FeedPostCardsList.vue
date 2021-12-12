@@ -3,8 +3,7 @@
   </div>
   <div class="container">
     <div class="row pb-2" :key = "post_card.id" v-for="post_card in post_cards_list">
-        <!-- <FeedPostCard @like="$emit('like', post_card.id)" class="FPC" :post_card = "post_card"/> -->
-        <FeedPostCard @like ="$emit('like', post_card.id)" class="FPC" :post_card = "post_card"/>
+        <FeedPostCard @like ="$emit('like', post_card.id)" class="FeedPC" :post_card = "post_card"/>
     </div>
   </div>
 </template>
@@ -18,18 +17,28 @@ export default {
   },
   props: {
     post_cards_list: Array
+  },
+  data(){
+    return {
+      force_reload: 0,
+    }
+  },
+  mounted() {
+    if(this.force_reload === 0){
+      this.force_reload = 1;
+      console.log('mounted')
+
+    }
   }
 }
 </script>
-<style>
-.FPC{
+<style scoped>
+.FeedPC{
   background: #333333;
   color: #FFFF;
   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem ;
-  /* min-height: 8rem;
-  max-height: 8rem */
   width:80vw;
-  max-height:60vh;
-
+  height:60vh;
+  min-height: 400px;
 }
 </style>

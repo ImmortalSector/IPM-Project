@@ -90,7 +90,7 @@ export default {
   font-size: xxx-large;
 }
 .type{
-  color: #5F0B19;
+  color: #ab112b;
   font-size: xxx-large;
 
 }
@@ -114,7 +114,7 @@ export default {
   border: solid 2px #333333;
   height: 5vh;
   width: 5vh;
-  background-color: #5F0B19;
+  background-color: #ab112b;
   text-align: center;
 
 }
@@ -140,7 +140,7 @@ export default {
   border-radius: 10px 0 0 10px;
 }
 .period-style{
-  color: #5F0B19;
+  color: #ab112b;
   font-size: 1.5em;
 }
 </style>

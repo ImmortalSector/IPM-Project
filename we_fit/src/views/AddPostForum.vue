@@ -119,7 +119,7 @@ export default{
   align-content: center;
 }
 .btn{
-  background-color: #5F0B19;
+  background-color: #ab112b;
   color: #FFFFFF;
 }
 .my-container{
