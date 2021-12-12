@@ -121,7 +121,7 @@
       "id": 0,
       "type": "Challenge",
       "title": "One punch man challenge!!!",
-      "creator": "Ana",
+      "creator": "Anna",
       "isPublic": false,
       "startDate": "2021-11-30",
       "endDate": "2021-12-30",
@@ -131,7 +131,7 @@
       "current_user_joined": false,
       "invities": [
         {
-          "name": "Ana"
+          "name": "Anna"
         },
         {
           "name": "António"
@@ -154,7 +154,11 @@
       "endDate": "2021-12-03",
       "rules": "",
       "description": "Running is life, running is love. Whowever beats my gramps wins!",
-      "invities": "",
+      "invities": [
+        {
+          "name": "António"
+        }
+      ],
       "img_path": "https://i.imgur.com/4ThGlbI.jpg",
       "current_user_joined": false
     },
@@ -171,7 +175,6 @@
       "invities": "",
       "img_path": "https://i.imgur.com/Ji5S7qj.png",
       "current_user_joined": false
-
     },
     {
       "id": 3,
@@ -186,7 +189,6 @@
       "invities": "",
       "img_path": "https://i.imgur.com/Ji5S7qj.png",
       "current_user_joined": false
-
     }
   ],
   "training_plans": [
@@ -246,7 +248,7 @@
     },
     {
       "id": 2,
-      "name": "testing_no_ex",
+      "name": "Back_day_another_day",
       "type": "back",
       "frequency": [
         1,
@@ -262,7 +264,7 @@
     },
     {
       "id": 3,
-      "name": "testing_add_with_ex",
+      "name": "Cheat day",
       "type": "chest",
       "frequency": [
         1,
@@ -298,13 +300,13 @@
         {
           "id": 2,
           "no_reps_instr": "",
-          "no_series": 0
+          "no_series": 5
         }
       ]
     },
     {
       "id": 4,
-      "name": "testing_add_with_ex",
+      "name": "The other chest",
       "type": "chest",
       "frequency": [
         1,
@@ -330,23 +332,23 @@
         {
           "id": 2,
           "no_reps_instr": "",
-          "no_series": 0
+          "no_series": 3
         },
         {
           "id": 9,
           "no_reps_instr": "",
-          "no_series": 0
+          "no_series": 15
         },
         {
           "id": 7,
           "no_reps_instr": "",
-          "no_series": 0
+          "no_series": 3
         }
       ]
     },
     {
       "id": 5,
-      "name": "all_empty",
+      "name": "Artemas Oreo",
       "type": "back",
       "frequency": [
         0,

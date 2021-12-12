@@ -83,21 +83,21 @@
                     <label class="form-label" for="friend1" style="font-size: 16px">Your friends</label>
                   </div>  
                   <div class="d-inline-flex left-align-absolute flex-row">
-                    <label class="form-label" for="friend1" style="margin-right:1.2rem; font-size: 16px">Oscar</label>
-                    <input style="width: 16px; height: 16px" type="checkbox" id="friend1" value="My friens1" v-model="checkedFriends1"> 
+                    <label class="form-label" for="friend1" style="margin-right:1.2rem; font-size: 16px">Oscar_67</label>
+                    <input style="width: 16px; height: 16px" type="checkbox" id="friend1" value="My friends1" v-model="this.checkedFriends1"> 
                   </div> 
                   <br><br>
                   <div class="d-inline-flex left-align-absolute flex-row">
                     <label class="form-label" for="friend2" style="margin-right:1.2rem; font-size: 16px">Anna</label>
-                    <input style="width: 16px; height: 16px" type="checkbox" id="friend2" value="My friens2" v-model="checkedFriends2">
+                    <input style="width: 16px; height: 16px" type="checkbox" id="friend2" value="My friends2" v-model="this.checkedFriends2">
                   </div>
                   <br><br>
                   <div class="d-inline-flex left-align-absolute flex-row">
                     <label class="form-label" for="friend2" style="margin-right:1.2rem; font-size: 16px">Sigma_Male</label>
-                    <input style="width: 16px; height: 16px" type="checkbox" id="friend2" value="My friens2" v-model="checkedFriends2">
+                    <input style="width: 16px; height: 16px" type="checkbox" id="friend3" value="My friends3" v-model="this.checkedFriends3">
                   </div>
                   <br><br>
-                  <button class="submit-btn btn btn-dark" @click="Invite">Invite</button>
+                  <button class="submit-btn btn btn-dark" @click.prevent="Invite">Invite</button>
               </div> 
 
             </div>
@@ -130,7 +130,11 @@ export default{
       endDate: '',
       ruleSet: "",
       description: "",
-      invites: [],
+      invites: [{name: 'Oscar'}],
+      creator: "Oscar",
+      checkedFriends1: false,
+      checkedFriends2: false,
+      checkedFriends3: false,
     }
   },
   methods : {
@@ -151,6 +155,26 @@ export default{
         if(this.endDate < this.startDate)
         this.startDate = this.endDate
       }
+    },
+
+    async Invite() {
+      let str = ''
+      if(this.checkedFriends1 && this.invites.filter(x => x.name === 'Oscar_67').length == 0) {
+        this.invites.push({name: 'Oscar_67'})
+        str += 'Oscar_67 '
+      }
+      if(this.checkedFriends2 && this.invites.filter(x => x.name === 'Anna').length == 0) {
+        this.invites.push({name: 'Anna'})
+        str += 'Anna '
+      }
+      if(this.checkedFriends3 && this.invites.filter(x => x.name === 'Sigma_Male').length == 0) {
+        this.invites.push({name: 'Sigma_Male'})
+        str += 'Sigma_Male '
+      }
+      if (str !== '')
+        alert('You invited '+str)
+      else
+        alert('You didn\'t invite no one')
     },
 
     async AddEvent() {
@@ -176,7 +200,10 @@ export default{
           endDate: this.endDate,
           rules: this.ruleSet,
           description: this.description,
-          invites: this.invites
+          creator: this.creator,
+          invities: this.invites,
+          img_path: "https://i.imgur.com/Ji5S7qj.png",
+          current_user_joined: true
       }
       console.log(new_event);
       const res = await fetch('api/event_cards_list', {
@@ -190,7 +217,7 @@ export default{
         alert('Something went wrong on our side. Please retry submitting the Event. If this continues please contact our team.\n Sorry for the inconvenience.')
         return
       }else{
-        await this.$router.push({path: `/event_cards_list/${id}`});
+        await this.$router.push({path: `/eventpost/${id}`});
       }
     },
 
