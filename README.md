@@ -1,8 +1,3 @@
-# IPM-Project
-This project corresponds to a web application that was built with the help of an open-source model-view-viewmodel front end Javascript framework, Vue.js.
-
-## In order to run the application, the user most follow the following steps:
-
 0. If you don't have it, install node.js. You can get it on the following site: https://nodejs.org/en/download/
    Make sure you have node available globally by running the command:
  
@@ -24,8 +19,9 @@ This project corresponds to a web application that was built with the help of an
           > npm run serve
        
        Console 2:
-          > npm run db
-           
+          > npm run db      
+
 4. On the console instance where you ran "npm run serve" wait for two links to be displayed. After that either click any of the links or type them in your browser. 
+
 
 5. You are now running wefit
