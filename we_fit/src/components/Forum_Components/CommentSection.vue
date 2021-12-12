@@ -37,7 +37,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .divider{
   size: 5px;
   color: #333333;

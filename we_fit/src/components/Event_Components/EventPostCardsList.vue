@@ -20,7 +20,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .FPC{
   background: #333333;
   color: #FFFF;

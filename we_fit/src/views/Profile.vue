@@ -153,7 +153,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .this-hr{
   width: 100%;height: 2px; color: #333333
 }

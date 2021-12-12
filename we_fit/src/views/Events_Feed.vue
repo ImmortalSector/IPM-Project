@@ -141,7 +141,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   input[type='checkbox'] {
     box-sizing: border-box;
     appearance: none;
