@@ -1,3 +1,8 @@
+# IPM-Project
+This project corresponds to a web application that was built with the help of an open-source model-view-viewmodel front end Javascript framework, Vue.js.
+
+## In order to run the application, the user most follow the following steps:
+
 0. If you don't have it, install node.js. You can get it on the following site: https://nodejs.org/en/download/
    Make sure you have node available globally by running the command:
  
