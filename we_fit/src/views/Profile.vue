@@ -105,7 +105,7 @@
 <script>
 import ProfileAchievementCard from "../components/Profile_Components/ProfileAchievmentCard";
 import ProfileTrainingPlan from "../components/Profile_Components/ProfileTrainingPlans";
-import EventPostCardsList from "../components/Event_Components/EventPostCardsList";
+import EventPostCardsList from "../components/Profile_Components/ProfileEventPostCardsList";
 export default {
   name: "Profile",
   components: {
