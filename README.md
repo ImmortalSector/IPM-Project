@@ -19,9 +19,11 @@ This project corresponds to a web application that was built with the help of an
           > npm update
 
 3. Run the following commands, one on each console (order shouldnt matter):
-
+       
+       Console 2:
           > npm run serve
-           
+       
+       Console 2:
           > npm run db
            
 4. On the console instance where you ran "npm run serve" wait for two links to be displayed. After that either click the any of the links or type them in your browser. 
