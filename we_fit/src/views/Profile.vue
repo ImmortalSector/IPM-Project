@@ -2,10 +2,13 @@
   <div class="container d-flex justify-content-center">
     <div class="row">
       <div class="col align-items-center">
-        <img class="profile-img" alt="WeFit" src="../assets/logo.png" >
+        <img class="profile-img" alt="WeFit" src="https://i.imgur.com/dzWVbkj.jpg?4" >
       </div>
       <div class="col">
         <div class="profile-info px-md-5 px-auto">
+          <p  class="fw-bold" style="margin-top: 1rem;">
+            UserID: <span class="color-red">Oscar</span>
+          </p>
           <p class="fw-bold" style="margin-left: 3rem;">
             Age: <span class="color-red">32</span> | Weight <span class="color-red">70</span>kg | Height: <span class="color-red">177</span>cm
           </p>
@@ -102,7 +105,7 @@
 <script>
 import ProfileAchievementCard from "../components/Profile_Components/ProfileAchievmentCard";
 import ProfileTrainingPlan from "../components/Profile_Components/ProfileTrainingPlans";
-import EventPostCardsList from "../components/Event_Components/EventPostCardsList";
+import EventPostCardsList from "../components/Profile_Components/ProfileEventPostCardsList";
 export default {
   name: "Profile",
   components: {
@@ -155,7 +158,7 @@ export default {
   width: 100%;height: 2px; color: #333333
 }
 .profile-img{
-  object-fit: scale-down;
+  object-fit: fill;
   height: 20vh;
   width: 20vh;
   border: solid #333333 1px;

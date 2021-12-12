@@ -59,10 +59,10 @@ export default {
 
 <style scoped>
 .image_thumbnail {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   border: 3px solid #333333;
-  object-fit: cover!important;
+  object-fit: contain!important;
 }
 
 .voting-element{

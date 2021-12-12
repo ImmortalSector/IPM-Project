@@ -1,7 +1,7 @@
 <template>
   <div class="container main-detail-container">
     <div class="row main-image-container">
-      <img class="main-image" alt="WeFit logo" src="../assets/logo.png">
+      <img class="main-image" alt="WeFit logo" :src="post.img_path">
     </div>
     <div class="row main-info-container">
         
@@ -81,9 +81,13 @@
     </div>
     <br><br>
     <div class="align-items-center">
-      <button class="submit-btn btn btn-dark" @click="join">Join event</button>
+      <div v-if="post.current_user_joined === true">      
+        <button class="submit-btn btn btn-dark" @click="disjoin">Disjoin event</button>
+      </div>
+      <div v-else>
+        <button class="submit-btn btn btn-dark" @click="join">Join event</button>
+      </div>
     </div>
-
   </div>
 </template>
 
@@ -102,11 +106,37 @@ export default{
     };
   },
   methods : {
+    
+      async join() {
+        // let len = this.invities.length  
+        // this.invities[len++] = "Oscar"  //idk if necessary...
+        this.post.current_user_joined = true
+        this.post.invities.push({
+          'name': "Oscar",
+        });
+        this.updatePostOnDb(this.post);
+        let len = this.invities.length  
+        this.invities[len++] = "Oscar" 
+        location.reload()
 
-    async join() {
-      //let len = this.invities.length
-      //this.invities[len++] = "me"
-    }
+      },
+
+      async disjoin() {
+        this.post.invities = this.post.invities.filter( el => el.name !== "Oscar" );        
+        this.post.current_user_joined = false
+        this.updatePostOnDb(this.post);
+        this.invities = this.invities.filter( el => el !== "Oscar" );
+        location.reload()
+      },
+      async updatePostOnDb(post){
+        await fetch(`api/event_cards_list/${this.id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify(post),
+        })
+      }
       
   },
   async created() {

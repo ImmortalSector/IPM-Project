@@ -1,7 +1,7 @@
 <template>
   <h1>Feed</h1>
   <div class="home">
-    <feed-post-cards-list @like="like" :post_cards_list = "post_cards_list" :key="this.force_reload"/>
+    <feed-post-cards-list @like="like" :post_cards_list = "post_cards_list" />
   </div>
 
 </template>
@@ -16,8 +16,7 @@ export default {
   },
   data() {
     return {
-      post_cards_list: [],
-      force_reload: 0,
+      post_cards_list: []
     }
   },
   methods: {
@@ -48,20 +47,7 @@ export default {
     },*/
   },
   async created() {
-    this.post_cards_list = await this.fetchFeedPostCardsList();
-
+    this.post_cards_list = await this.fetchFeedPostCardsList()
   },
-  mounted() {
-    if(this.force_reload === 0){
-       this.force_reload = 1;
-        console.log('mounted')
-
-    }
-  }
 }
 </script>
-<style scoped>
-.home{
-  min-height: 100vh;
-}
-</style>
