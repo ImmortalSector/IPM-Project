@@ -19,7 +19,7 @@
         </div>
         <div class="col-sm">
           <label class="form-label" for="myEvents" style="margin-right:1.2rem; font-size: 16px">My Events</label>
-          <input style="width: 16px; height: 16px" type="checkbox" id="myEvents" value="My Events" v-model="checkedMyEvents">
+          <input @input="onChangeMyEvents" style="width: 16px; height: 16px" type="checkbox" id="myEvents" value="My Events" v-model="this.checkedMyEvents">
         </div>
     </div>
   </div>
@@ -52,7 +52,7 @@ export default {
       lastSearch: "",
       startDate: "",
       endDate: "" ,
-      checkedMyEvents: "",
+      checkedMyEvents: false,
       event_types: [{name: 'Challenge'}, {name: 'Competition'}, {name: 'Meeting'}],
     }
   },
@@ -99,6 +99,16 @@ export default {
         (event.startDate === this.startDate) && (event.endDate === this.endDate))
       }
     },
+    async onChangeMyEvents() {
+      if(this.checkedMyEvents === false) {
+        this.event_cards_list = this.event_cards_list.filter((event) => 
+          (event.current_user_joined === true))
+        this.checkedMyEvents = true
+      } else {
+        this.event_cards_list = await this.fetchEventsPostCardsList()
+        this.checkedMyEvents = false
+      }
+    },
 
     async fetchEventsPostCardsList (){
       const res = await fetch('api/event_cards_list')
@@ -131,7 +141,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   input[type='checkbox'] {
     box-sizing: border-box;
     appearance: none;

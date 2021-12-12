@@ -1,7 +1,7 @@
 <template>
   <div class="container main-detail-container">
     <div class="row main-image-container">
-      <img class="main-image" alt="WeFit logo" src="../assets/logo.png">
+      <img class="main-image" alt="WeFit logo" :src="post.img_path">
     </div>
     <div class="row main-info-container">
       <p class="post-title">
@@ -84,7 +84,7 @@ export default{
         return
       }
       console.log(this.post.comments);
-      const author = 'me';
+      const author = 'Oscar';
       const id = this.post.comments.length;
       const text = this.newCommentText;
       const my_vote = 1;

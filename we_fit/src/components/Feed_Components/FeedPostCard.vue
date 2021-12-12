@@ -43,12 +43,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .image_post {
     width:100%;
     height:100%;
     border: 3px solid #333333;
-    object-fit: cover!important;
+    object-fit: contain!important;
   }
   .title-row{
     padding-left: 10px;

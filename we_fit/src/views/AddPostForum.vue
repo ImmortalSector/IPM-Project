@@ -41,6 +41,7 @@ export default{
   },
   methods: {
     async OnSubmit(e){
+      // if (this.title.length <...)
       e.preventDefault();
       const id = await this.calcIndex();
       console.log(this.post_anonimously, this.title, this.description, id)

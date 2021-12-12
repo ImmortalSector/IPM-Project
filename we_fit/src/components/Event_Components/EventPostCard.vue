@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .image_thumbnail {
   max-width: 100%;
   max-height: 100%;
