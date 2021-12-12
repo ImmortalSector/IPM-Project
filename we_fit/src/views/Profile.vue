@@ -13,7 +13,7 @@
             Age: <span class="color-red">32</span> | Weight <span class="color-red">70</span>kg | Height: <span class="color-red">177</span>cm
           </p>
           <p  class="fw-bold">
-            <span class="color-red">0</span> Friends
+            <span class="color-red">3</span> Friends
           </p>
           <p class="fw-bold">
             <span class="color-red">{{this.achievements.length}}</span> Events

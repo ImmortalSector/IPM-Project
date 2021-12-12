@@ -52,7 +52,7 @@
         </div>
 
         <div class="d-inline-flex left-align-absolute flex-row">
-          <label class="form-label" for="inviities" style="margin-right:1.2rem; font-size: large">Invities</label>
+          <label class="form-label" for="inviities" style="margin-right:1.2rem; font-size: large">Participants</label>
           <div :key = "invitie.name" v-for="invitie in this.invities" >
             <div v-if="invitie !== this.invities[this.invities.length-1]">
               {{ invitie.name }}; 
