@@ -20,7 +20,7 @@ This project corresponds to a web application that was built with the help of an
 
 3. Run the following commands, one on each console (order shouldnt matter):
        
-       Console 2:
+       Console 1:
           > npm run serve
        
        Console 2:
