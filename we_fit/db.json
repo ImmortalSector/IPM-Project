@@ -171,6 +171,7 @@
       "invities": "",
       "img_path": "https://i.imgur.com/Ji5S7qj.png",
       "current_user_joined": false
+
     },
     {
       "id": 3,
@@ -185,6 +186,7 @@
       "invities": "",
       "img_path": "https://i.imgur.com/Ji5S7qj.png",
       "current_user_joined": false
+
     }
   ],
   "training_plans": [
