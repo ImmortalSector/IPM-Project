@@ -14,7 +14,9 @@ This project corresponds to a web application that was built with the help of an
            
            > npm install -g @vue/cli @vue/cli-service-global
 
-2. After installing vue, all you need is to download the project from git. Navigate to the wefit folder on two different console instances, you'll need them to run the backend and the frontend at the same time.
+2. After installing vue, all you need is to download the project from git, and install the necessary dependencies (use the command bellow). Navigate to the wefit folder on two different console instances, you'll need them to run the backend and the frontend at the same time.
+
+          > npm update
 
 3. Run the following commands, one on each console (order shouldnt matter):
 
