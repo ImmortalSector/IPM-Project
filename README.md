@@ -14,7 +14,7 @@ This project corresponds to a web application that was built with the help of an
            
            > npm install -g @vue/cli @vue/cli-service-global
 
-2. After installing vue, all you need is to download the project from git, and install the necessary dependencies (use the command bellow). Navigate to the wefit folder on two different console instances, you'll need them to run the backend and the frontend at the same time.
+2. After installing vue, all you need is to download the project from git, and install the necessary dependencies (use the command below). Navigate to the wefit folder on two different console instances, you'll need them to run the backend and the frontend at the same time.
 
           > npm update
 
@@ -26,6 +26,6 @@ This project corresponds to a web application that was built with the help of an
        Console 2:
           > npm run db
            
-4. On the console instance where you ran "npm run serve" wait for two links to be displayed. After that either click the any of the links or type them in your browser. 
+4. On the console instance where you ran "npm run serve" wait for two links to be displayed. After that either click any of the links or type them in your browser. 
 
 5. You are now running wefit
